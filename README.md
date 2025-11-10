@@ -1,57 +1,24 @@
-# 👋 Hi, I'm Jordan Williams
+# Jordan Williams – Electrical & FPGA Design Portfolio
 
-🎓 **B.S. Electrical Engineering | University of Georgia | Graduating May 2026**  
-🔌 *Aspiring Hardware / FPGA Design Engineer*  
-📍 Athens, GA | 📫 Jordan.Williams2@uga.edu | 🔗 www.linkedin.com/in/jordan-williams-029b55268  | 💻 [Resume PDF Link]
+🎓 B.S. Electrical Engineering, University of Georgia (May 2026)  
+🔌 Focus Areas: FPGA Design, Digital Hardware, Embedded Systems, PCB Layout  
 
----
+## 🔧 About Me
+I’m passionate about digital hardware and embedded system design, with experience in Verilog, FPGA development (Basys3/Nexys A7), and PCB design using Altium Designer.  
+My projects span from HDL-based CPU simulation to real PCB hardware for satellite subsystems.
 
-## ⚙️ About Me
-I’m an Electrical Engineering student passionate about **digital hardware design**, **FPGA development**, and **embedded systems**.  
-My academic and hands-on experience span Verilog HDL, PCB design (Altium), and system-level integration across satellites, automation, and lab-built systems.
+## 📂 Featured Projects
+- **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC)** – ARM-like CPU simulation with custom ISA and compiler for computer architecture class.  
+- **[PWM Generator (FPGA)](./FPGA_Projects/PWM_Generator)** – Parameterized PWM output design for LED dimming.  
+- **[Satellite Stack PCB](./Hardware_Designs/Altium_PCB_Projects/Satellite_Stack_Module)** – Four-layer board design for Small Satellite Research Lab (UGA).  
+- **[Electrical Workbench](./Embedded_Projects/RaspberryPi_Sensor_Interface)** – Raspberry Pi-based system for measuring analog signals (ADC/DAC interface).  
 
-I enjoy turning **schematics and HDL into working systems** 
-
----
-
-## 🧠 Technical Skills
-**HDL & Simulation:** Verilog, Vivado, Icarus Verilog, GTKWave  
-**PCB Design:** Altium Designer, Eagle CAD, Multisim  
-**Programming:** Python, C, C++  
-**Modeling & Analysis:** MATLAB, Simulink  
-**Embedded Systems:** Raspberry Pi, Arduino  
+## 💡 Skills
+- **HDL Design:** Verilog, Vivado, Icarus Verilog, GTKWave  
+- **Hardware:** Altium Designer, Eagle, PCB Testing & Validation  
+- **Embedded:** Arduino, Raspberry Pi, Python, C/C++  
+- **Analysis:** MATLAB, Simulink  
 
 ---
+📫 **Contact:** [www.linkedin.com/in/jordan-williams-029b55268  | Jordan.Williams2@uga.edu 
 
-## 🚀 Featured Projects
-
-### 🔹 [Single-Cycle CPU in Verilog](./HDL_Projects/Verilog_SCC)
-A 32-bit CPU based on an ARM-like ISA, implemented in Verilog.  
-Includes instruction fetch/decode/execute stages, custom compiler integration, and waveform verification.
-
-### 🔹 [PWM Generator (FPGA)](./FPGA_Projects/PWM_Generator)
-Parameterizable PWM signal generator for LED brightness and motor control applications.
-
-### 🔹 [MOCI Satellite PCB Design](./Hardware_Designs/Altium_PCB_Projects/Satellite_Stack_Module)
-Stackable board design for the Small Satellite Research Lab at UGA, focusing on communication and power subsystems.
-
-### 🔹 [Raspberry Pi Electrical Workbench](./Embedded_Projects/RaspberryPi_Sensor_Interface)
-Raspberry Pi-based educational system to measure voltage, current, and resistance through DAC/ADC circuitry.
-
----
-
-## 🛰 Current Work
-💡 **Hardware Team Member, UGA Small Satellite Research Lab**  
-- Designing and validating stackable PCBs for the *MOCI satellite*  
-- Assisting with ground station hardware repair and documentation  
-
----
-
-## 📎 Contact
-📧 Jordan.Williams2@uga.edu 
-💼 www.linkedin.com/in/jordan-williams-029b55268   
-📂 [Resume PDF or Google Drive Link]  
-
----
-
-⭐ *Check out my pinned repositories below for FPGA, hardware, and embedded design projects.*

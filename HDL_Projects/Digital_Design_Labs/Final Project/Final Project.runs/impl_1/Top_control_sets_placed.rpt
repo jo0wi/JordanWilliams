@@ -1,0 +1,99 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Thu Nov  6 16:44:18 2025
+| Host         : DESKTOP-7S5KLHF running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
+| Design       : Top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    21 |
+|    Minimum number of control sets                        |    21 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    77 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    21 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     3 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     5 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            6 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              63 |           21 |
+| Yes          | No                    | No                     |              20 |            9 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             247 |           54 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+----------------------------------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|  Clock Signal  |                             Enable Signal                            |             Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+----------------------------------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+|  Clk_IBUF_BUFG |                                                                      |                                         |                1 |              2 |         2.00 |
+|  ClkMS_BUFG    | ReactionTimer_0/sel                                                  | ReactionTimer_0/DebounceCnt[3]_i_1_n_0  |                1 |              4 |         4.00 |
+|  ClkMS_BUFG    | ReactionTimer_0/State__0                                             | Rst_IBUF                                |                2 |              4 |         2.00 |
+|  ClkLCD_BUFG   | LCDDisplay_0/LcdInterface_0/LCDCntrl_0/CharsDisplayed                | Rst_IBUF                                |                1 |              5 |         5.00 |
+|  ClkMS_BUFG    |                                                                      | Rst_IBUF                                |                2 |              5 |         2.50 |
+|  ClkLCD_BUFG   | LCDDisplay_0/FSM_onehot_State[6]_i_1_n_0                             | Rst_IBUF                                |                2 |              7 |         3.50 |
+|  ClkMS_BUFG    |                                                                      |                                         |                5 |              7 |         1.40 |
+|  ClkMS_BUFG    | ReactionTimer_0/LED[0]_i_1_n_0                                       |                                         |                5 |              8 |         1.60 |
+|  ClkLCD_BUFG   | LCDDisplay_0/LcdInterface_0/LCDDriver_0/Counter_0                    | Rst_IBUF                                |                4 |              9 |         2.25 |
+|  ClkMS_BUFG    | ReactionTimer_0/Count[8]_i_1_n_0                                     | Rst_IBUF                                |                2 |              9 |         4.50 |
+|  ClkMS_BUFG    | ReactionTimer_0/ReactionTime[9]_i_2_n_0                              | ReactionTimer_0/ReactionTime[9]_i_1_n_0 |                2 |              9 |         4.50 |
+|  ClkLCD_BUFG   | LCDDisplay_0/LcdInterface_0/LCDCntrl_0/FSM_onehot_State[10]_i_1_n_0  | Rst_IBUF                                |                3 |             11 |         3.67 |
+|  Clk_IBUF_BUFG |                                                                      | LCDClkDiv_0/DivCnt[0]_i_1_n_0           |                3 |             11 |         3.67 |
+|  ClkMS_BUFG    |                                                                      | RandomGen_0/Counter[11]_i_1_n_0         |                4 |             12 |         3.00 |
+|  ClkMS_BUFG    | ReactionTimer_0/RandomTemp                                           |                                         |                4 |             12 |         3.00 |
+|  ClkMS_BUFG    | ReactionTimer_0/R_count[11]_i_1_n_0                                  | Rst_IBUF                                |                2 |             12 |         6.00 |
+|  Clk_IBUF_BUFG |                                                                      | ClkDiv_0/count[0]_i_1_n_0               |                4 |             16 |         4.00 |
+|  ClkLCD_BUFG   |                                                                      | Rst_IBUF                                |                8 |             19 |         2.38 |
+|  ClkLCD_BUFG   | LCDDisplay_0/Display                                                 | Rst_IBUF                                |               11 |             36 |         3.27 |
+|  ClkLCD_BUFG   | LCDDisplay_0/LcdInterface_0/LCDDriver_0/FSM_onehot_State[42]_i_1_n_0 | Rst_IBUF                                |                8 |             38 |         4.75 |
+|  ClkLCD_BUFG   | LCDDisplay_0/LcdInterface_0/LCDCntrl_0/DisplayInt                    | Rst_IBUF                                |               16 |            103 |         6.44 |
++----------------+----------------------------------------------------------------------+-----------------------------------------+------------------+----------------+--------------+
+
+

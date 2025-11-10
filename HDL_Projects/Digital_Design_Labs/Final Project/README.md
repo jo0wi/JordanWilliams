@@ -21,6 +21,12 @@ Designed as a **High-Level State Machine (HLSM)** using the **one-procedure beha
 ✅ LCD communication via **LCDUpdate/LCDAck handshaking**
 
 ---
+## 🧰 Tools Used
+- **HDL / Simulation:**	Verilog
+- **Synthesis / Implementation:** Vivado 2023.x
+- **Hardware:**	Basys3 FPGA, Pmod CLP LCD
+
+---
 
 ## 🧩 Design Overview
 

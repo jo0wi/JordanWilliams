@@ -10,7 +10,7 @@
 I’m an Electrical Engineering student passionate about **digital hardware design**, **FPGA development**, and **embedded systems**.  
 My academic and hands-on experience span Verilog HDL, PCB design (Altium), and system-level integration across satellites, automation, and lab-built systems.
 
-I enjoy turning **schematics and HDL into working systems** — whether it’s a satellite board stack, a single-cycle CPU, or an embedded measurement system.
+I enjoy turning **schematics and HDL into working systems** 
 
 ---
 
@@ -25,7 +25,7 @@ I enjoy turning **schematics and HDL into working systems** — whether it’s a
 
 ## 🚀 Featured Projects
 
-### 🔹 [Single-Cycle CPU in Verilog](./FPGA_Projects/Verilog_CPU)
+### 🔹 [Single-Cycle CPU in Verilog](./HDL_Projects/Verilog_SCC)
 A 32-bit CPU based on an ARM-like ISA, implemented in Verilog.  
 Includes instruction fetch/decode/execute stages, custom compiler integration, and waveform verification.
 

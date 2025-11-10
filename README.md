@@ -14,7 +14,7 @@ My projects span from HDL-based CPU simulation to real PCB hardware for satellit
 
 ## 💡 Skills
 - **HDL Design:** Verilog, Vivado, Icarus Verilog, GTKWave  
-- **Hardware:** Altium Designer, Eagle, PCB Testing & Validation  
+- **Hardware Design:** Altium Designer, Eagle, PCB Testing & Validation  
 - **Embedded:** Arduino, Raspberry Pi, Python, C/C++  
 - **Analysis:** MATLAB, Simulink  
 

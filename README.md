@@ -9,7 +9,7 @@ My projects span from HDL-based CPU simulation to real PCB hardware for satellit
 
 ## 📂 Featured Projects
 - **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC)** – ARM-like CPU simulation with custom ISA and compiler for computer architecture class.  
-- **[PWM Generator (FPGA)](./FPGA_Projects/PWM_Generator)** – Parameterized PWM output design for LED dimming.  
+- **[PWM Generator (FPGA)](./HDL_Projects/Digital_Design_Labs/Final%20Project/)** – Reaction Timer implemented on the Basys3 FPGA Development Board  
 - **[Satellite Stack PCB](./Hardware_Designs/Altium_PCB_Projects/Satellite_Stack_Module)** – Four-layer board design for Small Satellite Research Lab (UGA).  
 - **[Electrical Workbench](./Embedded_Projects/RaspberryPi_Sensor_Interface)** – Raspberry Pi-based system for measuring analog signals (ADC/DAC interface).  
 

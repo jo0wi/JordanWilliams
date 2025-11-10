@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../TBird_Turnsignal.srcs/sources_1/new/ClkDiv.v" \
+"../../../../TBird_Turnsignal.srcs/sim_1/new/ClkDiv_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

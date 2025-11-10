@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Oct 14 13:12:29 2025
+# Process ID         : 45276
+# Current directory  : C:/Users/jorda/HDL/Digital_Design_Labs/UpDownCounter_4bit/UpDownCounter_4bit.runs/synth_1
+# Command line       : vivado.exe -log UD_Counter_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UD_Counter_Top.tcl
+# Log file           : C:/Users/jorda/HDL/Digital_Design_Labs/UpDownCounter_4bit/UpDownCounter_4bit.runs/synth_1/UD_Counter_Top.vds
+# Journal file       : C:/Users/jorda/HDL/Digital_Design_Labs/UpDownCounter_4bit/UpDownCounter_4bit.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-7S5KLHF
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 4500U with Radeon Graphics         
+# CPU Frequency      : 2370 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 6
+# Host memory        : 16504 MB
+# Swap memory        : 2952 MB
+# Total Virtual      : 19457 MB
+# Available Virtual  : 3138 MB
+#-----------------------------------------------------------
+source UD_Counter_Top.tcl -notrace

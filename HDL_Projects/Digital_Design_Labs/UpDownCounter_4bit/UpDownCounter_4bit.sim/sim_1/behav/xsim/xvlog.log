@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jorda/HDL/Digital_Design_Labs/UpDownCounter_4bit/UpDownCounter_4bit.srcs/sources_1/new/UpDownCounter_4bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UpDownCounter_4bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/jorda/HDL/Digital_Design_Labs/UpDownCounter_4bit/UpDownCounter_4bit.srcs/sim_1/new/UpDownCounter_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UpDownCounter_tb

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_ReactionTimer_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_ReactionTimer" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="42,866.666 ns"></ZoomStartTime>
+      <ZoomEndTime time="43,866.667 ns"></ZoomEndTime>
+      <Cursor1Time time="43,393.137 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="104"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/tb_ReactionTimer/Clk" type="logic">
+      <obj_property name="ElementShortName">Clk</obj_property>
+      <obj_property name="ObjectShortName">Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/Rst" type="logic">
+      <obj_property name="ElementShortName">Rst</obj_property>
+      <obj_property name="ObjectShortName">Rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/Start" type="logic">
+      <obj_property name="ElementShortName">Start</obj_property>
+      <obj_property name="ObjectShortName">Start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/uut/start_pulse" type="logic">
+      <obj_property name="ElementShortName">start_pulse</obj_property>
+      <obj_property name="ObjectShortName">start_pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/RandomValue" type="array">
+      <obj_property name="ElementShortName">RandomValue[12:0]</obj_property>
+      <obj_property name="ObjectShortName">RandomValue[12:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/uut/R_count" type="array">
+      <obj_property name="ElementShortName">R_count[11:0]</obj_property>
+      <obj_property name="ObjectShortName">R_count[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/LED" type="array">
+      <obj_property name="ElementShortName">LED[7:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/ReactionTime" type="array">
+      <obj_property name="ElementShortName">ReactionTime[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ReactionTime[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/Cheat" type="logic">
+      <obj_property name="ElementShortName">Cheat</obj_property>
+      <obj_property name="ObjectShortName">Cheat</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/Slow" type="logic">
+      <obj_property name="ElementShortName">Slow</obj_property>
+      <obj_property name="ObjectShortName">Slow</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/Wait" type="logic">
+      <obj_property name="ElementShortName">Wait</obj_property>
+      <obj_property name="ObjectShortName">Wait</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/uut/ReactionTime" type="array">
+      <obj_property name="ElementShortName">ReactionTime[9:0]</obj_property>
+      <obj_property name="ObjectShortName">ReactionTime[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/LCDUpdate" type="logic">
+      <obj_property name="ElementShortName">LCDUpdate</obj_property>
+      <obj_property name="ObjectShortName">LCDUpdate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/LCDAck" type="logic">
+      <obj_property name="ElementShortName">LCDAck</obj_property>
+      <obj_property name="ObjectShortName">LCDAck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/uut/State" type="array">
+      <obj_property name="ElementShortName">State[31:0]</obj_property>
+      <obj_property name="ObjectShortName">State[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/uut/Count" type="array">
+      <obj_property name="ElementShortName">Count[9:0]</obj_property>
+      <obj_property name="ObjectShortName">Count[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/uut/StateCnt" type="array">
+      <obj_property name="ElementShortName">StateCnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">StateCnt[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

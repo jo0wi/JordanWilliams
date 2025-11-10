@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Mon Sep 22 14:50:48 2025
+# Process ID         : 11832
+# Current directory  : C:/Users/jorda/HDL/Seven_Segment_Display/Seven_Segment_Display.runs/synth_1
+# Command line       : vivado.exe -log Decoder7Seg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Decoder7Seg.tcl
+# Log file           : C:/Users/jorda/HDL/Seven_Segment_Display/Seven_Segment_Display.runs/synth_1/Decoder7Seg.vds
+# Journal file       : C:/Users/jorda/HDL/Seven_Segment_Display/Seven_Segment_Display.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-7S5KLHF
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 5 4500U with Radeon Graphics         
+# CPU Frequency      : 2370 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 6
+# Host memory        : 16504 MB
+# Swap memory        : 4034 MB
+# Total Virtual      : 20539 MB
+# Available Virtual  : 2823 MB
+#-----------------------------------------------------------
+source Decoder7Seg.tcl -notrace

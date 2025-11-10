@@ -1,0 +1,13 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sim_1/new/Belt_Warn_tb.v,1757478852,verilog,,,,Belt_Warn_tb,,,,,,,,
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sim_1/new/Decoder2to4_tb.v,1757468342,verilog,,,,Decoder2to4_tb,,,,,,,,
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sim_1/new/Lab2part_2_tb.v,1757137252,verilog,,,,Lab2part_2_tb,,,,,,,,
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sources_1/new/BeltWarn_Circuit.v,1757478759,verilog,,C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sim_1/new/Belt_Warn_tb.v,,BeltWarn_Circuit,,,,,,,,
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sources_1/new/Belt_Warn.v,1757132977,verilog,,C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sim_1/new/Belt_Warn_tb.v,,Belt_Warn,,,,,,,,
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sources_1/new/Decoder2to4.v,1757467899,verilog,,C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sim_1/new/Decoder2to4_tb.v,,Decoder2to4,,,,,,,,
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sources_1/new/Decoder_circuit.v,1757464756,verilog,,C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sim_1/new/Decoder2to4_tb.v,,Decoder_circuit,,,,,,,,
+C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sources_1/new/Lab2part_2.v,1757137613,verilog,,C:/Users/jorda/HDL/Digital_Design_Lab_2/Digital_Design_Lab_2.srcs/sim_1/new/Lab2part_2_tb.v,,Lab2part_2,,,,,,,,

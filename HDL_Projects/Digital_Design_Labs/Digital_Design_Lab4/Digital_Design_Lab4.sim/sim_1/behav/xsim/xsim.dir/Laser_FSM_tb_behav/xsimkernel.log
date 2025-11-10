@@ -1,0 +1,7 @@
+Running: xsim.dir/Laser_FSM_tb_behav/xsimk.exe -simmode gui -wdb Laser_FSM_tb_behav.wdb -simrunnum 0 -socket 61481
+Design successfully loaded
+Design Loading Memory Usage: 28632 KB (Peak: 28632 KB)
+Design Loading CPU Usage: 796 ms
+Simulation completed
+Simulation Memory Usage: 29376 KB (Peak: 29376 KB)
+Simulation CPU Usage: 859 ms

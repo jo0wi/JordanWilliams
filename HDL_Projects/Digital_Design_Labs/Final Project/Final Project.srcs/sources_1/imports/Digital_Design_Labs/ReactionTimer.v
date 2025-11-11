@@ -39,7 +39,7 @@ module ReactionTimer(Clk, Rst, Start, LED, ReactionTime, Cheat, Slow, Wait, Rand
         
         
     always @(posedge Clk) begin
-        // **************** DEBOUNCER AND SYNCRONIZER ******************
+        // DEBOUNCER AND SYNCRONIZER 
         // two flop synchronizer to "cross clock domains" from user input
         start_sync_0 <= Start;
         start_sync_1 <= start_sync_0;

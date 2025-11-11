@@ -2,11 +2,11 @@
 
 module tb_ReactionTimer;
 
-reg Clk;
-reg Rst;
-reg Start;
-reg LCDAck;
-reg [12:0] RandomValue;
+reg Clk = 0;
+reg Rst = 0;
+reg Start = 0;
+reg LCDAck = 0;
+wire [12:0] RandomValue;
 
 wire [7:0] LED;
 wire [9:0] ReactionTime;
@@ -15,18 +15,13 @@ wire Slow;
 wire Wait;
 wire LCDUpdate;
 
-
+RandomGen random(Clk, Rst, RandomValue);
 ReactionTimer uut(Clk, Rst, Start, LED, ReactionTime, Cheat, Slow, Wait, RandomValue, LCDUpdate, LCDAck);
 
-initial Clk = 0;
 always #5 Clk = ~Clk;
 
 initial begin
-  Rst = 0;
-  Start = 0;
-  RandomValue = 1500; // fixed random value for testing
-  LCDAck = 0;
-  repeat(3)@(posedge Clk);
+  repeat(5)@(posedge Clk);
   #2 Rst = 1;
   repeat(10)@(posedge Clk);
   #2 Rst = 0;
@@ -41,30 +36,21 @@ initial begin
   #2 Start = 0;
   repeat(20)@(posedge Clk);
   //TEST 2: MEASURE REACTION TIME
-  RandomValue = 10;
   #2 Start = 1; 
   repeat(12)@(posedge Clk);
-  #2 Start = 0; 
+  #2 Start = 0;
   @(posedge LED);
-  repeat(100)@(posedge Clk);
+  repeat(10)@(posedge Clk);
   #2 Start = 1;
   repeat(12)@(posedge Clk);
-  #2 Start = 0; 
+  #2 Start = 0;
+  repeat(20)@(posedge Clk); 
   // TEST 3: SLOW
-  repeat(20)@(posedge Clk);
   #2 Start = 1;
   repeat(12)@(posedge Clk);
   #2 Start = 0; 
-  repeat(10)@(posedge Clk); 
-  #2 Start = 1;
-  repeat(12)@(posedge Clk);
-  #2 Start = 0;
-  repeat(15)@(posedge Clk); // during wait period
-  #2 Start = 1; 
-  repeat(12)@(posedge Clk);
-  #2 Start = 0;
   @(posedge LED);
-  repeat(1000)@(posedge Clk); 
+  wait (uut.Count == 12'h140); 
   #2 Start = 1; 
   repeat(12)@(posedge Clk);
   #2 Start = 0;

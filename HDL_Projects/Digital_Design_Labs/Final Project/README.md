@@ -72,6 +72,6 @@ Interacts with the **Pmod CLP LCD** using handshake signals:
 - `"Too Slow!"`
 - `"0.xxxs"` (measured time)
 
-![Final Project Report](./HDL_Projects/DigitalDesignFinalProject.pdf)
+![Final Project Report](./DigitalDesignFinalProject.pdf)
 
 

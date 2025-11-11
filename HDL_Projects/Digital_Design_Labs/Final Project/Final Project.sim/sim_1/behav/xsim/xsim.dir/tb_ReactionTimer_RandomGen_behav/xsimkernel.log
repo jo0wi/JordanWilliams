@@ -2,3 +2,6 @@ Running: xsim.dir/tb_ReactionTimer_RandomGen_behav/xsimk.exe -simmode gui -wdb t
 Design successfully loaded
 Design Loading Memory Usage: 28644 KB (Peak: 28644 KB)
 Design Loading CPU Usage: 780 ms
+Simulation completed
+Simulation Memory Usage: 29408 KB (Peak: 29408 KB)
+Simulation CPU Usage: 890 ms

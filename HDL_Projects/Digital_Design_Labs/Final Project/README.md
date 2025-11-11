@@ -44,8 +44,6 @@ Implements all control logic and states:
 **Inputs:** `ClkMS`, `Rst`, `Start`, `LCDAck`, `RandomValue`  
 **Outputs:** `LED[7:0]`, `ReactionTime[9:0]`, `Cheat`, `Slow`, `Wait`, `LCDUpdate`
 
-![State Diagram](./docs/StateDiagram.png)
-
 ---
 
 ### ⏱ Clock Divider (`ClkDiv`)
@@ -53,17 +51,11 @@ Generates a **1 kHz clock** (`ClkMS`) from the Basys3’s 50 MHz input clock.
 Used for timing in milliseconds.  
 Verified in simulation using a testbench waveform.
 
-**Expected Period:** 1 ms  
-![Clock Divider Waveform](./docs/ClkDiv_Waveform.png)
-
 ---
 
 ### 🎲 Random Delay Generator (`RandomGen`)
 Produces a pseudo-random delay between **1 – 3 seconds** to vary the LED trigger time.  
 Implemented using a shift register and counter to simulate randomness (no `$random`).  
-
-**Verification:** Random values observed in waveform traces.  
-![Random Generator Waveform](./docs/RandomGen_Waveform.png)
 
 ---
 
@@ -80,6 +72,6 @@ Interacts with the **Pmod CLP LCD** using handshake signals:
 - `"Too Slow!"`
 - `"0.xxxs"` (measured time)
 
-![LCD Display Example](./docs/LCD_Display.jpg)
+![Final Project Report](./HDL_Projects/FinalProject/DigitalDesignFinalProject.pdf)
 
 

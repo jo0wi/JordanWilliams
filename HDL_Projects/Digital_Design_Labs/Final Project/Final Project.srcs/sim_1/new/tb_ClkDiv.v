@@ -2,7 +2,7 @@
 
 module tb_ClkDiv();
     
-    ClkDiv #(.CLK_Div(1))uut(Clk, Rst, ClkOut); 
+    ClkDiv uut(Clk, Rst, ClkOut); 
     
     reg Clk = 0;
     reg Rst = 0;

@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="42,866.666 ns"></ZoomStartTime>
-      <ZoomEndTime time="43,866.667 ns"></ZoomEndTime>
-      <Cursor1Time time="43,393.137 ns"></Cursor1Time>
+      <ZoomStartTime time="29,307.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="30,672.501 ns"></ZoomEndTime>
+      <Cursor1Time time="29,845.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="104"></NameColumnWidth>
+      <NameColumnWidth column_width="99"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="17" />
+   <WVObjectSize size="18" />
    <wvobject fp_name="/tb_ReactionTimer/Clk" type="logic">
       <obj_property name="ElementShortName">Clk</obj_property>
       <obj_property name="ObjectShortName">Clk</obj_property>
@@ -39,12 +39,16 @@
    <wvobject fp_name="/tb_ReactionTimer/RandomValue" type="array">
       <obj_property name="ElementShortName">RandomValue[12:0]</obj_property>
       <obj_property name="ObjectShortName">RandomValue[12:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_ReactionTimer/uut/RandomTemp" type="array">
+      <obj_property name="ElementShortName">RandomTemp[12:0]</obj_property>
+      <obj_property name="ObjectShortName">RandomTemp[12:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_ReactionTimer/uut/R_count" type="array">
       <obj_property name="ElementShortName">R_count[11:0]</obj_property>
       <obj_property name="ObjectShortName">R_count[11:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_ReactionTimer/LED" type="array">
       <obj_property name="ElementShortName">LED[7:0]</obj_property>
@@ -87,11 +91,11 @@
    <wvobject fp_name="/tb_ReactionTimer/uut/Count" type="array">
       <obj_property name="ElementShortName">Count[9:0]</obj_property>
       <obj_property name="ObjectShortName">Count[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_ReactionTimer/uut/StateCnt" type="array">
       <obj_property name="ElementShortName">StateCnt[31:0]</obj_property>
       <obj_property name="ObjectShortName">StateCnt[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

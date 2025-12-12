@@ -20,7 +20,11 @@ parameter   V_Display = 480,
             V_Frontporch = 10,
             V_Backporch = 33,
             V_Retrace = 2,
-            V_MAX = V_Display + V_Frontporch + V_Backporch + V_Retrace - 1;    
-            
+            V_MAX = V_Display + V_Frontporch + V_Backporch + V_Retrace - 1;  
+
+
+Clkgen #(.Clk_Speed(25_000_000)) Clk_25MHz(Clk, Rst, .Clk_Out(Clk_25MHz));
+
+reg [9:0] H_Counter, V_Counter;
                     
 endmodule

@@ -4,4 +4,5 @@ Nov  8 2024
 22:36:57
 C:/JordanWilliams/HDL_Projects/VGA_Controller/VGA_Controller.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
 C:/JordanWilliams/HDL_Projects/VGA_Controller/VGA_Controller.srcs/sim_1/new/tb_25MHz_Clk.v,1765391864,verilog,,,,tb_25MHz_Clk,,,,,,,,
-C:/JordanWilliams/HDL_Projects/VGA_Controller/VGA_Controller.srcs/sources_1/new/Clk_25MHz.v,1765392528,verilog,,C:/JordanWilliams/HDL_Projects/VGA_Controller/VGA_Controller.srcs/sim_1/new/tb_25MHz_Clk.v,,Clk_25MHz,,,,,,,,
+C:/JordanWilliams/HDL_Projects/VGA_Controller/VGA_Controller.srcs/sim_1/new/tb_VGAcontroller.v,1766546623,verilog,,,,tb_VGAcontroller,,,,,,,,
+C:/JordanWilliams/HDL_Projects/VGA_Controller/VGA_Controller.srcs/sources_1/new/VGA_Controller.v,1766549395,verilog,,C:/JordanWilliams/HDL_Projects/VGA_Controller/VGA_Controller.srcs/sim_1/new/tb_VGAcontroller.v,,VGA_Controller,,,,,,,,

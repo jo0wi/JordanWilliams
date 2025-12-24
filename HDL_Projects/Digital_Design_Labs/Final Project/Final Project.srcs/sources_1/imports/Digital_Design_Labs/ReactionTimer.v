@@ -9,7 +9,7 @@ module ReactionTimer(Clk, Rst, Start, LED, ReactionTime, Cheat, Slow, Wait, Rand
     output reg Cheat, Slow, Wait;
 	output reg LCDUpdate;
  
-    parameter   S_0 = 0, //State 0
+    localparam  S_0 = 0, //State 0
                 S_1 = 1, //State 1
                 S_2 = 2, //State 2
                 S_3 = 3, //State 3

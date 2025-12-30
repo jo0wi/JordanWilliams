@@ -1,0 +1,10 @@
+*.bit
+*.dcp
+*.wdb
+*.jou
+*.log
+.runs/
+.hw/
+.ip_user_files/
+.sim/
+*.gz

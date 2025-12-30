@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../uart transceiver.srcs/sources_1/new/UART_RX.v" \
+"../../../../uart transceiver.srcs/sim_1/new/tb_UART_RX.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

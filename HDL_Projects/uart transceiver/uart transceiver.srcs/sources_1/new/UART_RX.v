@@ -41,7 +41,7 @@ module UART_RX(
                 end else counter <= counter + 1;
             end
             DATA: begin
-                if (bit_index < 7) begin
+                if (bit_index < 8) begin
                     if (counter == CLKS_PER_BIT) begin
                         RX_reg [bit_index] <= UART_sig;
                         bit_index <= bit_index + 1;

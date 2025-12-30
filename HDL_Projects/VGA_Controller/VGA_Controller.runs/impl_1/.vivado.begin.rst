@@ -118,3 +118,78 @@
     <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="2636" HostCore="6" HostMemory="016504524800">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="10708" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="1344" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="8520" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="12464" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="18840" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="16632" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="20356" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="7220" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="6984" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="8056" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="10080" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="3348" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="6596" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="6016" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="jorda" Host="DESKTOP-7S5KLHF" Pid="18144" HostCore="6" HostMemory="016504524800">
+    </Process>
+</ProcessHandle>

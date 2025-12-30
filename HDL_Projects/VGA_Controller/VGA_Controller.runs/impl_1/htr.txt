@@ -7,4 +7,4 @@ REM Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 REM Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 REM
 
-vivado -log VGA_TEST.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source VGA_TEST.tcl -notrace
+vivado -log top_VGAdisplay.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_VGAdisplay.tcl -notrace

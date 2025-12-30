@@ -1,87 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1766550095">
-  <File Type="PA-TCL" Name="VGA_TEST.tcl"/>
-  <File Type="REPORTS-TCL" Name="VGA_TEST_reports.tcl"/>
-  <File Type="INIT-TIMING" Name="VGA_TEST_timing_summary_init.rpt"/>
-  <File Type="OPT-DCP" Name="VGA_TEST_opt.dcp"/>
-  <File Type="OPT-DRC" Name="VGA_TEST_drc_opted.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="VGA_TEST_methodology_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="VGA_TEST.hwdef"/>
-  <File Type="OPT-TIMING" Name="VGA_TEST_timing_summary_opted.rpt"/>
-  <File Type="OPT-RQA-PB" Name="VGA_TEST_rqa_opted.pb"/>
-  <File Type="PWROPT-DCP" Name="VGA_TEST_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="VGA_TEST_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="VGA_TEST_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="VGA_TEST_placed.dcp"/>
-  <File Type="PLACE-IO" Name="VGA_TEST_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="VGA_TEST_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="VGA_TEST_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="VGA_TEST_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="VGA_TEST_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="VGA_TEST_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="VGA_TEST_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="VGA_TEST_timing_summary_placed.rpt"/>
-  <File Type="PLACE-RQA-PB" Name="VGA_TEST_rqa_placed.pb"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="VGA_TEST_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="VGA_TEST_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="VGA_TEST_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="VGA_TEST_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-TIMING" Name="VGA_TEST_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="VGA_TEST_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="VGA_TEST_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="VGA_TEST_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="VGA_TEST_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="VGA_TEST_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="VGA_TEST_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="VGA_TEST_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="VGA_TEST_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="VGA_TEST_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="VGA_TEST_power_routed.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="VGA_TEST_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="VGA_TEST_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="VGA_TEST_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="VGA_TEST_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="VGA_TEST_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="VGA_TEST_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="VGA_TEST_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="VGA_TEST_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="VGA_TEST_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="VGA_TEST_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="VGA_TEST_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="VGA_TEST_bus_skew_routed.rpx"/>
-  <File Type="ROUTE-RQS-PB" Name="VGA_TEST_rqs_routed.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="VGA_TEST_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="VGA_TEST_postroute_physopt_bb.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1766981699">
+  <File Type="PA-TCL" Name="top_VGAdisplay.tcl"/>
+  <File Type="REPORTS-TCL" Name="top_VGAdisplay_reports.tcl"/>
+  <File Type="INIT-TIMING" Name="top_VGAdisplay_timing_summary_init.rpt"/>
+  <File Type="OPT-DCP" Name="top_VGAdisplay_opt.dcp"/>
+  <File Type="OPT-DRC" Name="top_VGAdisplay_drc_opted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="top_VGAdisplay_methodology_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="top_VGAdisplay.hwdef"/>
+  <File Type="OPT-TIMING" Name="top_VGAdisplay_timing_summary_opted.rpt"/>
+  <File Type="OPT-RQA-PB" Name="top_VGAdisplay_rqa_opted.pb"/>
+  <File Type="PWROPT-DCP" Name="top_VGAdisplay_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="top_VGAdisplay_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="top_VGAdisplay_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="top_VGAdisplay_placed.dcp"/>
+  <File Type="PLACE-IO" Name="top_VGAdisplay_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="top_VGAdisplay_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="top_VGAdisplay_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="top_VGAdisplay_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="top_VGAdisplay_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="top_VGAdisplay_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="top_VGAdisplay_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="top_VGAdisplay_timing_summary_placed.rpt"/>
+  <File Type="PLACE-RQA-PB" Name="top_VGAdisplay_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="top_VGAdisplay_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="top_VGAdisplay_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="top_VGAdisplay_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="top_VGAdisplay_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="top_VGAdisplay_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="top_VGAdisplay_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="top_VGAdisplay_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="top_VGAdisplay_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="top_VGAdisplay_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="top_VGAdisplay_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="top_VGAdisplay_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="top_VGAdisplay_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_VGAdisplay_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_VGAdisplay_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="top_VGAdisplay_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="top_VGAdisplay_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="top_VGAdisplay_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="top_VGAdisplay_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="top_VGAdisplay_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="top_VGAdisplay_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="top_VGAdisplay_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="top_VGAdisplay_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="top_VGAdisplay_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="top_VGAdisplay_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="top_VGAdisplay_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="top_VGAdisplay_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="top_VGAdisplay_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-RQS-PB" Name="top_VGAdisplay_rqs_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_VGAdisplay_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_VGAdisplay_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING" Name="VGA_Controller_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="VGA_Controller_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="VGA_Controller_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="VGA_Controller_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="VGA_Controller_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="VGA_Controller_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BG-BIT" Name="VGA_TEST.bit"/>
-  <File Type="BG-BIN" Name="VGA_TEST.bin"/>
-  <File Type="BITSTR-MSK" Name="VGA_TEST.msk"/>
-  <File Type="BITSTR-RBT" Name="VGA_TEST.rbt"/>
-  <File Type="BITSTR-NKY" Name="VGA_TEST.nky"/>
-  <File Type="BITSTR-BMM" Name="VGA_TEST_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="VGA_TEST.mmi"/>
-  <File Type="PDI-FILE" Name="VGA_TEST.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="VGA_TEST_boot.pdi"/>
-  <File Type="PL-PDI-FILE" Name="VGA_TEST_pld.pdi"/>
-  <File Type="RCFI_FILE" Name="VGA_TEST.rcfi"/>
-  <File Type="CFI_FILE" Name="VGA_TEST.cfi"/>
-  <File Type="RNPI_FILE" Name="VGA_TEST.rnpi"/>
-  <File Type="NPI_FILE" Name="VGA_TEST.npi"/>
-  <File Type="RBD_FILE" Name="VGA_TEST.rbd"/>
+  <File Type="BG-BIT" Name="top_VGAdisplay.bit"/>
+  <File Type="BG-BIN" Name="top_VGAdisplay.bin"/>
+  <File Type="BITSTR-MSK" Name="top_VGAdisplay.msk"/>
+  <File Type="BITSTR-RBT" Name="top_VGAdisplay.rbt"/>
+  <File Type="BITSTR-NKY" Name="top_VGAdisplay.nky"/>
+  <File Type="BITSTR-BMM" Name="top_VGAdisplay_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="top_VGAdisplay.mmi"/>
+  <File Type="PDI-FILE" Name="top_VGAdisplay.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="top_VGAdisplay_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="top_VGAdisplay_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="top_VGAdisplay.rcfi"/>
+  <File Type="CFI_FILE" Name="top_VGAdisplay.cfi"/>
+  <File Type="RNPI_FILE" Name="top_VGAdisplay.rnpi"/>
+  <File Type="NPI_FILE" Name="top_VGAdisplay.npi"/>
+  <File Type="RBD_FILE" Name="top_VGAdisplay.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="VGA_TEST.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="VGA_TEST.sysdef"/>
-  <File Type="BG-BGN" Name="VGA_TEST.bgn"/>
-  <File Type="BG-DRC" Name="VGA_TEST.drc"/>
-  <File Type="RDI-RDI" Name="VGA_TEST.vdi"/>
+  <File Type="BITSTR-LTX" Name="top_VGAdisplay.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="top_VGAdisplay.sysdef"/>
+  <File Type="BG-BGN" Name="top_VGAdisplay.bgn"/>
+  <File Type="BG-DRC" Name="top_VGAdisplay.drc"/>
+  <File Type="RDI-RDI" Name="top_VGAdisplay.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-RQS" Name="VGA_TEST_routed.rqs"/>
-  <File Type="POSTROUTE-PHYSOPT-RQS" Name="VGA_TEST_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="top_VGAdisplay_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="top_VGAdisplay_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
@@ -93,8 +93,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/VGA_noSignal.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_VGAdisplay.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/VGA_TEST.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -110,8 +125,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="VGA_TEST"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="top_VGAdisplay"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

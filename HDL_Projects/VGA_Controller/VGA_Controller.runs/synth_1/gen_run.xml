@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1766550095" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/VGA_TEST.dcp">
-  <File Type="PA-TCL" Name="VGA_TEST.tcl"/>
-  <File Type="REPORTS-TCL" Name="VGA_TEST_reports.tcl"/>
-  <File Type="RDS-RDS" Name="VGA_TEST.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="VGA_TEST_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="VGA_TEST_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="VGA_TEST_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="VGA_TEST.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="VGA_TEST_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="VGA_TEST_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1766981642" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/VGA_TEST.dcp">
+  <File Type="PA-TCL" Name="top_VGAdisplay.tcl"/>
+  <File Type="REPORTS-TCL" Name="top_VGAdisplay_reports.tcl"/>
+  <File Type="RDS-RDS" Name="top_VGAdisplay.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_VGAdisplay_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="top_VGAdisplay_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="top_VGAdisplay_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="top_VGAdisplay.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_VGAdisplay_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_VGAdisplay_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/VGA_Controller.v">
@@ -18,8 +18,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/VGA_noSignal.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_VGAdisplay.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/VGA_TEST.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -35,8 +50,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="VGA_TEST"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="top_VGAdisplay"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

@@ -2,7 +2,7 @@
 
 module UART_TX(
     input Clk,
-    input rst,  
+    input Rst,  
     input TX_valid,
     input [7:0] TX_byte,
     output reg TX_active,
@@ -23,8 +23,8 @@ module UART_TX(
     reg [7:0] TX_byte_reg;
 
     
-    always @(posedge Clk or posedge rst) begin
-        if (rst) begin
+    always @(posedge Clk or posedge Rst) begin
+        if (Rst) begin
             State <= IDLE;
             counter <= 0;
             bit_index <= 0;

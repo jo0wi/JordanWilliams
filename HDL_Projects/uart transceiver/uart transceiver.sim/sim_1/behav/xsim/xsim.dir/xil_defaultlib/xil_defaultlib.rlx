@@ -3,7 +3,9 @@
 Nov  8 2024
 22:36:57
 C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
-C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sim_1/imports/new/tb_UART_TX.v,1767152808,verilog,,,,tb_UART_TX,,,,,,,,
-C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sim_1/new/tb_UART_RX.v,1767125381,verilog,,,,tb_UART_RX,,,,,,,,
-C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/UART_RX.v,1767125205,verilog,,C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/UART_TX.v,,UART_RX,,,,,,,,
-C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/UART_TX.v,1767152622,verilog,,C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sim_1/imports/new/tb_UART_TX.v,,UART_TX,,,,,,,,
+C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sim_1/new/tb_UART_transceiver.v,1767413931,verilog,,,,tb_UART_transceiver,,,,,,,,
+C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/imports/new/ClkDiv.v,1767506924,verilog,,C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/UART_RX.v,,ClkDiv,,,,,,,,
+C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/UART_RX.v,1767383019,verilog,,C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/UART_TX.v,,UART_RX,,,,,,,,
+C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/UART_TX.v,1767378635,verilog,,C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/hex_to_ssd_2digit.v,,UART_TX,,,,,,,,
+C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/hex_to_ssd_2digit.v,1767509070,verilog,,C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/top_UART_RXTX.v,,hex_to_ssd,,,,,,,,
+C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sources_1/new/top_UART_RXTX.v,1767504889,verilog,,C:/JordanWilliams/HDL_Projects/uart transceiver/uart transceiver.srcs/sim_1/new/tb_UART_transceiver.v,,top_UART_RXTX,,,,,,,,

@@ -3,7 +3,7 @@
 module tb_UART_RX();
 
 reg Clk = 0;
-reg UART_sig = 1;
+reg RX_line = 1;
 
 wire RX_valid;
 wire [7:0] RX_data;
@@ -16,22 +16,22 @@ task UART_SEND_BYTE;
     
     begin
         //START BIT
-        UART_sig = 0; 
+        RX_line = 0; 
         #8680
         
         // SEND DATA BYTE
         for (i = 0; i < 8; i = i + 1) begin
-            UART_sig <= data_byte[i];
+            RX_line <= data_byte[i];
             #8680;
         end
         
         // STOP BIT
-        UART_sig <= 1;
+        RX_line <= 1;
         #8680;
     end
 endtask
 
-UART_RX uut(Clk, UART_sig, RX_valid, RX_data);
+UART_RX uut(Clk, RX_line, RX_valid, RX_data);
 
 always #5 Clk = ~Clk; //100MHz
 

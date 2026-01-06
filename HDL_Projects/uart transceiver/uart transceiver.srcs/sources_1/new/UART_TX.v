@@ -1,16 +1,18 @@
 `timescale 1ns / 1ps
-
+// this module transmitts byte sized packets of uart data
+// at 115200 baud with a 100MHz internal clk
+ 
 module UART_TX(
     input Clk,
     input Rst,  
-    input TX_valid,
-    input [7:0] TX_byte,
-    output reg TX_active,
-    output reg TX_sig,
-    output reg TX_done
+    input TX_valid, // byte ready to send
+    input [7:0] TX_byte, // transmitted byte
+    output reg TX_active = 1'b0, // is the line transmitting
+    output reg TX_line = 1'b1, // serial data
+    output reg TX_done = 1'b0 // transmission complete
     );
     
-    parameter CLKS_PER_BIT = 868;
+    parameter CLKS_PER_BIT = 868; // clks per baud tick foro 115200 baud and 100MHz Clk
     
     parameter IDLE = 2'b00;
     parameter START = 2'b01;
@@ -29,12 +31,12 @@ module UART_TX(
             counter <= 0;
             bit_index <= 0;
             TX_active <= 0;
-            TX_sig <= 1;
+            TX_line <= 1;
             TX_done <= 0;
         end else begin
             case(State) 
-                IDLE: begin
-                    TX_sig <= 1;
+                IDLE: begin // not transmitting
+                    TX_line <= 1;
                     TX_done <= 0;
                     counter <= 0;
                     bit_index <= 0;
@@ -45,18 +47,18 @@ module UART_TX(
                         State <= START;    
                     end
                 end
-                START: begin
-                    TX_sig <= 0;
+                START: begin // transmit start bit (low)
+                    TX_line <= 0;
                     
-                    if (counter < CLKS_PER_BIT - 1) begin
+                    if (counter < CLKS_PER_BIT - 1) begin 
                         counter <= counter + 1;
                     end else begin
                         counter <= 0;
                         State <= DATA;
                     end
                 end
-                DATA: begin
-                    TX_sig <= TX_byte_reg[bit_index];
+                DATA: begin // begin serial transmission of byte
+                    TX_line <= TX_byte_reg[bit_index];
                     
                     if (counter < CLKS_PER_BIT - 1) begin
                         counter <= counter + 1;
@@ -70,8 +72,8 @@ module UART_TX(
                         end
                     end
                 end
-                STOP: begin
-                    TX_sig <= 1; 
+                STOP: begin // transmit stop bit (high)
+                    TX_line <= 1; 
                     
                     if (counter < CLKS_PER_BIT - 1) begin
                         counter <= counter + 1;
@@ -85,5 +87,4 @@ module UART_TX(
             endcase    
         end
     end
-       
 endmodule

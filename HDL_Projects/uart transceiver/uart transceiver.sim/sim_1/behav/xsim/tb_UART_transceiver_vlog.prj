@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../uart transceiver.srcs/sources_1/imports/new/ClkDiv.v" \
+"../../../../uart transceiver.srcs/sources_1/new/UART_RX.v" \
+"../../../../uart transceiver.srcs/sources_1/new/UART_TX.v" \
+"../../../../uart transceiver.srcs/sources_1/new/hex_to_ssd_2digit.v" \
+"../../../../uart transceiver.srcs/sources_1/new/top_UART_RXTX.v" \
+"../../../../uart transceiver.srcs/sim_1/new/tb_UART_transceiver.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

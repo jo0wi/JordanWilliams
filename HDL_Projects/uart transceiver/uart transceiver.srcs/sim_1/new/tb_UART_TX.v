@@ -8,7 +8,7 @@ reg TX_valid = 0;
 reg [7:0] TX_byte = 0;
 
 wire TX_active;
-wire TX_sig;
+wire TX_line;
 wire TX_done;
 
 UART_TX uut(
@@ -17,7 +17,7 @@ UART_TX uut(
     .TX_valid(TX_valid),
     .TX_byte(TX_byte),
     .TX_active(TX_active),
-    .TX_sig(TX_sig),
+    .TX_line(TX_line),
     .TX_done(TX_done)
 );
 

@@ -8,7 +8,7 @@ I’m passionate about digital hardware and embedded system design, with experie
 My projects span from HDL-based CPU simulation to real PCB hardware for satellite subsystems.
 
 ## Featured Projects
-- **[UART Echoing Transceiver](./HDL_Projects/uart%20transceiver)** - UART Transceiver that displays ascii code from serial terminal and echos it back.  
+- **[UART Echoing Transceiver](./HDL_Projects/uart%20transceiver)** - UART Transceiver that displays ascii code from serial terminal and echos it back to the terminal over USB.  
 - **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC)** - ARM-like CPU simulation with custom ISA and compiler for computer architecture course.  
 - **[Reaction Timer (FPGA)](./HDL_Projects/Digital_Design_Labs/Final%20Project/)** - Reaction Timer implemented on the Basys3 FPGA Development Board   
  

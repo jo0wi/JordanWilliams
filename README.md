@@ -21,5 +21,6 @@ My projects span from HDL-based CPU simulation to real PCB hardware for satellit
 - **Analysis:** MATLAB, Simulink, GTKWave
 
 ---
-**Contact:** LinkedIn: www.linkedin.com/in/jordan-williams-029b55268 | Jordan.Williams2@uga.edu 
+###Contact 
+LinkedIn: www.linkedin.com/in/jordan-williams-029b55268 | Jordan.Williams2@uga.edu 
 

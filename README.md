@@ -1,24 +1,46 @@
 # Jordan Williams – Electrical & FPGA Design Portfolio
 
- B.S. Electrical Engineering, University of Georgia (2026)  
- Focus Areas: FPGA Design, Digital Hardware, Embedded Systems, PCB Layout  
+B.S. Electrical Engineering, University of Georgia (Expected 2026)  
+Focus Areas: FPGA Design, Digital Hardware, Embedded Systems, Computer Architecture  
 
 ## About Me
-I’m passionate about digital hardware and embedded system design, with experience in Verilog, FPGA development (Basys3/Nexys A7), and PCB design using Altium Designer.  
-My projects span from HDL-based CPU simulation to real PCB hardware for satellite subsystems.
+I’m passionate about digital hardware and embedded system design, with hands-on experience in FPGA development, embedded programming, and hardware-software integration. My projects demonstrate proficiency in Verilog HDL, microcontroller programming, and system-level design thinking.
 
 ## Featured Projects
-- **[UART Echoing Transceiver](./HDL_Projects/uart%20transceiver)** - UART Transceiver that displays ascii code from serial terminal and echos it back to the terminal over USB.  
-- **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC)** - ARM-like CPU simulation with custom ISA and compiler for computer architecture course.  
-- **[Reaction Timer (FPGA)](./HDL_Projects/Digital_Design_Labs/Final%20Project/)** - Reaction Timer implemented on the Basys3 FPGA Development Board with an LCD pmod.      
-- **[FPGA VGA Controller](./HDL_Projects/VGA_Controller)** - VGA Controller module for FPGA with image generation test modules    
- 
+
+### FPGA & Digital Design Projects
+- **[Cache Emulator](./Embedded-Programing_Projects/CacheEmulator/Cache_Emulator/)** - C-based cache simulator modeling set-associative caches with LRU replacement, analyzing memory trace performance
+- **[LED Blinker](./HDL_Projects/blinkLED/)** - Basic FPGA PWM generator implementing 1Hz LED blinking on Nexys-A7
+- **[Debounced Toggle Button](./HDL_Projects/debounce_toggle_btn/)** - FPGA project with mechanical button debouncing and toggle functionality
+- **[Seven Segment Display](./HDL_Projects/Digital_Design_Labs/Seven_Segment_Display/)** - Hexadecimal to seven-segment decoder with full digit support
+- **[Thunderbird Turn Signal](./HDL_Projects/Digital_Design_Labs/TBird_Turnsignal/)** - FSM implementation of classic sequential automobile turn signals
+- **[4-Bit Up/Down Counter](./HDL_Projects/Digital_Design_Labs/UpDownCounter_4bit/)** - Synchronous counter with direction control and enable
+- **[Seven Segment Counter](./HDL_Projects/seven_segment_cntr/)** - Synchronous seven-segment display driver for counter applications
+- **[UART Interface for ESP32](./HDL_Projects/UART_Interface_ESP_32/)** - Full-duplex UART implementation for FPGA-ESP32 communication
+- **[UART Transceiver](./HDL_Projects/uart%20transceiver/)** - UART transceiver with ASCII display and echo functionality
+- **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC/)** - ARM-like CPU simulation with custom ISA and compiler
+- **[Reaction Timer](./HDL_Projects/Digital_Design_Labs/Final%20Project/)** - FPGA-based reaction timer with LCD display
+- **[VGA Controller](./HDL_Projects/VGA_Controller/)** - VGA controller module with image generation capabilities
+
+### Embedded Systems Projects
+- **[Air Quality Sensor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/)** - ESP32-based environmental monitoring system with multiple sensors and cloud connectivity
+- **[M5Stick Bluetooth Module](./Embedded-Programing_Projects/CacheEmulator/M5Stick_Bluetooth_mod/)** - BLE server implementation for wireless button input transmission
+- **[Home Security System](./Embedded-Programing_Projects/CacheEmulator/semester-project-jordan_ricky-main/)** - Computer vision-based security system with camera detection and display interface
 
 ## Skills
-- **HDL Design:** Verilog, Vivado, Icarus Verilog  
-- **Hardware Design:** Altium Designer, Eagle, PCB Testing & Validation  
-- **Embedded:** Arduino, Raspberry Pi, Python, C/C++  
-- **Analysis:** MATLAB, Simulink, GTKWave
+- **HDL Design:** Verilog, SystemVerilog, Vivado, ModelSim
+- **Embedded Programming:** C/C++, Python, Arduino, ESP32, Raspberry Pi
+- **Hardware Design:** Altium Designer, PCB Layout, Signal Integrity
+- **Tools:** MATLAB, Simulink, GTKWave, Git
+- **Protocols:** UART, SPI, I2C, BLE, VGA
+- **FPGA Platforms:** Xilinx (Nexys-A7, Basys-3), Intel/Altera
+
+## Coursework Highlights
+- Digital Design & Computer Architecture
+- Embedded Systems Programming
+- PCB Design & Manufacturing
+- Control Systems
+- Signal Processing
 
 ---
 ### Contact 

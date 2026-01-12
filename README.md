@@ -1,14 +1,18 @@
 # Jordan Williams – Electrical & FPGA Design Portfolio
 
 B.S. Electrical Engineering, University of Georgia (Expected 2026)  
-Focus Areas: FPGA Design, Digital Hardware, Embedded Systems, Computer Architecture  
+Focus Areas: FPGA Design, Hardware Design, Embedded Systems, Computer Architecture  
 
 ## About Me
-I’m passionate about digital hardware and embedded system design, with hands-on experience in FPGA development, embedded programming, and hardware-software integration. My projects demonstrate proficiency in Verilog HDL, microcontroller programming, and system-level design thinking.
+I’m passionate about hardware and embedded system design, with hands-on experience in FPGA development, PCB design, embedded programming, and hardware-software integration. My projects demonstrate proficiency in Verilog HDL, microcontroller programming, and system-level design thinking.
 
 ## Featured Projects
+- **[Air Quality Sensor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/)** - ESP32-based environmental monitoring system with multiple sensors and cloud connectivity  
+- **[UART Transceiver](./HDL_Projects/uart%20transceiver/)** - UART transceiver with ASCII display and echo functionality
+- **[Home Security System](./Embedded-Programing_Projects/CacheEmulator/semester-project-jordan_ricky-main/)** - Computer vision-based security system with camera detection and display interface
+- **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC/)** - ARM-like CPU simulation with custom ISA and compiler
 
-### FPGA & Digital Design Projects
+### Projects List
 - **[Cache Emulator](./Embedded-Programing_Projects/CacheEmulator/Cache_Emulator/)** - C-based cache simulator modeling set-associative caches with LRU replacement, analyzing memory trace performance
 - **[LED Blinker](./HDL_Projects/blinkLED/)** - Basic FPGA PWM generator implementing 1Hz LED blinking on Nexys-A7
 - **[Debounced Toggle Button](./HDL_Projects/debounce_toggle_btn/)** - FPGA project with mechanical button debouncing and toggle functionality
@@ -20,15 +24,13 @@ I’m passionate about digital hardware and embedded system design, with hands-o
 - **[UART Transceiver](./HDL_Projects/uart%20transceiver/)** - UART transceiver with ASCII display and echo functionality
 - **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC/)** - ARM-like CPU simulation with custom ISA and compiler
 - **[Reaction Timer](./HDL_Projects/Digital_Design_Labs/Final%20Project/)** - FPGA-based reaction timer with LCD display
-- **[VGA Controller](./HDL_Projects/VGA_Controller/)** - VGA controller module with image generation capabilities
-
-### Embedded Systems Projects
+- **[VGA Controller](./HDL_Projects/VGA_Controller/)** - VGA controller module with image generation capabilities  
 - **[Air Quality Sensor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/)** - ESP32-based environmental monitoring system with multiple sensors and cloud connectivity
 - **[M5Stick Bluetooth Module](./Embedded-Programing_Projects/CacheEmulator/M5Stick_Bluetooth_mod/)** - BLE server implementation for wireless button input transmission
 - **[Home Security System](./Embedded-Programing_Projects/CacheEmulator/semester-project-jordan_ricky-main/)** - Computer vision-based security system with camera detection and display interface
 
 ## Skills
-- **HDL Design:** Verilog, SystemVerilog, Vivado, ModelSim
+- **HDL Design:** Verilog, Vivado, ModelSim
 - **Embedded Programming:** C/C++, Python, Arduino, ESP32, Raspberry Pi
 - **Hardware Design:** Altium Designer, PCB Layout, Signal Integrity
 - **Tools:** MATLAB, Simulink, GTKWave, Git

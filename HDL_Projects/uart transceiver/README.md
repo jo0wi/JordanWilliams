@@ -1,96 +1,122 @@
-# 📡 UART Echoing Transceiver (FPGA – Nexys A7 Board)
+# UART Echoing Transceiver
 
-![Nexys A7 Board Setup](./docs/Nexys_A7_Setup.jpg)
+A complete UART (Universal Asynchronous Receiver/Transmitter) implementation on FPGA featuring bidirectional serial communication with real-time hexadecimal display. This project demonstrates advanced digital communication protocols, state machine design, and hardware-software interfacing.
 
-### 🎯 Overview
-This project implements a **UART Transceiver** on the **Nexys A7-100T FPGA development board**, written in **Verilog HDL**.  
-The system receives ASCII data from a serial terminal over USB, displays the received byte's hexadecimal value on a **7-segment display**, and echoes the data back to the terminal.
+## Features
 
-Designed with modular UART receiver and transmitter modules, it demonstrates serial communication, data processing, and hardware interfacing.
+- **Full-Duplex UART Communication**: Simultaneous transmit and receive at 115,200 baud
+- **Real-Time Hexadecimal Display**: 2-digit seven-segment display showing received byte values
+- **Echo Functionality**: Automatically retransmits received data for verification
+- **Modular Design**: Separate RX, TX, and display modules for clean architecture
+- **Clock Domain Management**: Proper clock division for display multiplexing
+- **Error Handling**: Start/stop bit validation and framing error detection
 
----
+## Technologies Used
 
-## ⚙️ Features
-✅ Receives UART data at **115200 baud** from serial terminal  
-✅ Displays received byte in **hexadecimal** on 7-segment display (2 digits)  
-✅ Echoes received data back to terminal for verification  
-✅ Handles start/stop bits and data framing  
-✅ Multiplexed 7-segment display with active-low control  
-✅ Reset functionality for initialization  
+- **HDL**: Verilog
+- **FPGA Platform**: Xilinx Nexys A7-100T (Artix-7)
+- **Development Tools**: Vivado Design Suite
+- **Communication Protocol**: UART (RS-232 serial)
+- **Display Interface**: Multiplexed seven-segment display
 
----
-## 🧰 Tools Used
-- **HDL / Simulation:**	Verilog
-- **Synthesis / Implementation:** Vivado 2023.x
-- **Hardware:**	Nexys A7-100T FPGA, USB-UART bridge
+## Hardware Requirements
 
----
+- Nexys A7-100T FPGA development board
+- USB-to-UART bridge (integrated on board)
+- Serial terminal software (PuTTY, Tera Term, etc.)
+- Seven-segment display (8 digits, common cathode)
 
-## 🧩 Design Overview
+## Implementation Details
 
-### 📥 UART_RX (Receiver Module)
-Implements UART reception with state machine:
+### UART Receiver (UART_RX.v)
+Implements a robust UART receiver with precise timing control:
 
-| State | Description |
-|-------|--------------|
-| **IDLE** | Waits for start bit (low) |
-| **START** | Verifies start bit and samples midpoint |
-| **DATA** | Receives 8 data bits (LSB first) |
-| **STOP** | Verifies stop bit (high) and sets valid flag |
+- **Baud Rate**: 115,200 bps (868 clock cycles per bit at 100 MHz)
+- **Data Format**: 8 data bits, 1 start bit, 1 stop bit, no parity
+- **State Machine**: 4-state FSM (IDLE → START → DATA → STOP)
+- **Sampling**: Mid-bit sampling for noise immunity
+- **Timing**: Synchronous design with counter-based bit timing
 
-**Inputs:** `Clk`, `RX_line`  
-**Outputs:** `RX_valid`, `RX_data[7:0]`
+### UART Transmitter (UART_TX.v)
+Complementary transmitter module with matching protocol:
 
-### 📤 UART_TX (Transmitter Module)
-Implements UART transmission with state machine:
+- **State Machine**: 4-state FSM with active transmission tracking
+- **Bit Ordering**: LSB-first transmission
+- **Flow Control**: TX_active flag prevents data corruption
+- **Completion Signaling**: TX_done pulse on transmission complete
 
-| State | Description |
-|-------|--------------|
-| **IDLE** | Waits for valid data to transmit |
-| **START** | Sends start bit (low) |
-| **DATA** | Sends 8 data bits (LSB first) |
-| **STOP** | Sends stop bit (high) and signals done |
+### Seven-Segment Display Driver (hex_to_ssd_2digit.v)
+Intelligent display controller for hexadecimal visualization:
 
-**Inputs:** `Clk`, `Rst`, `TX_valid`, `TX_byte[7:0]`  
-**Outputs:** `TX_active`, `TX_line`, `TX_done`
+- **Multiplexing**: Time-division multiplexing for 2-digit display
+- **Clock Division**: 60 kHz refresh rate from 100 MHz system clock
+- **Encoding**: Full hexadecimal character set (0-F)
+- **Control**: Active-low segment and anode control signals
 
-### 🖥️ hex_to_ssd (Display Module)
-Drives 7-segment display for hexadecimal output:
+### Clock Divider
+Generates appropriate clock frequencies for different subsystems from the 100 MHz system clock.
 
-- Multiplexes between upper and lower nibbles
-- Active-low segment and anode control
-- Updates on valid RX data
+## File Structure
 
-**Inputs:** `ClkOut`, `RX_data[7:0]`, `RX_valid`  
-**Outputs:** `A-G`, `AN[7:0]`
+- `top_UART_RXTX.v`: Top-level integration module
+- `UART_RX.v`: UART receiver implementation
+- `UART_TX.v`: UART transmitter implementation
+- `hex_to_ssd_2digit.v`: Seven-segment display driver
+- `uart transceiver.xdc`: Pin constraints for Nexys A7
+- Vivado project files (.xpr, .cache, .hw, .runs, .srcs)
 
-### ⏱️ ClkDiv (Clock Divider)
-Generates slower clocks for display multiplexing from 100MHz system clock.
+## Setup and Usage
 
----
+### Hardware Setup
+1. Connect Nexys A7 to computer via USB
+2. Ensure FPGA is programmed with the bitstream
 
-## 🔧 Setup and Usage
-1. **Synthesize and Program:** Open in Vivado, synthesize, and program Nexys A7 board.
-2. **Connect Serial Terminal:** Use PuTTY or similar, connect to board's USB COM port at 115200 baud.
-3. **Send Data:** Type characters in terminal; board displays hex on 7-segment and echoes back.
-4. **Reset:** Press board reset to clear display.
+### Software Setup
+1. Open serial terminal (PuTTY recommended)
+2. Connect to the FPGA's COM port at:
+   - **Baud Rate**: 115,200
+   - **Data Bits**: 8
+   - **Stop Bits**: 1
+   - **Parity**: None
+   - **Flow Control**: None
 
----
+### Operation
+1. Type any character in the terminal
+2. Observe the hexadecimal value displayed on the seven-segment display
+3. Verify the character is echoed back in the terminal
+4. Press board reset to clear the display
 
-## 📊 Block Diagram
-```
-Serial Terminal <-> USB <-> UART_RX -> hex_to_ssd -> 7-Segment Display
-                      |                ^
-                      v                |
-                   UART_TX <-----------
-```
+## Timing Analysis
 
----
+- **System Clock**: 100 MHz
+- **UART Baud Rate**: 115,200 bps
+- **Clocks per Bit**: 868 (100,000,000 ÷ 115,200)
+- **Display Refresh**: 60 kHz (multiplexing frequency)
+- **Bit Sampling**: Mid-bit sampling for reliability
 
-## 🐛 Debugging Tips
-- **No Display:** Check pin constraints in `.xdc` file.
-- **Wrong Data:** Verify UART timing (868 cycles/bit at 100MHz).
-- **Echo Issues:** Ensure TX/RX lines are correctly connected in top module.
+## Applications
 
----
-**Note:** Ensure correct pin mappings for Nexys A7 UART and 7-segment pins in constraints file.
+- Serial communication debugging and testing
+- FPGA-microcontroller interfacing
+- Embedded system development tools
+- Protocol analysis and verification
+- Educational UART implementation reference
+
+## Learning Outcomes
+
+This project demonstrates expertise in:
+- **Serial Communication Protocols**: UART implementation from scratch
+- **State Machine Design**: Complex FSM for protocol handling
+- **Timing-Critical Design**: Precise clock cycle counting
+- **Hardware Interfacing**: Seven-segment display control
+- **Modular Design**: Clean separation of concerns
+- **FPGA Development Workflow**: Synthesis, implementation, and programming
+
+## Future Enhancements
+
+- Add parity bit support
+- Implement configurable baud rates
+- Add FIFO buffers for higher throughput
+- Include error detection and correction
+- Add flow control (RTS/CTS)
+- Create testbench for automated verification

@@ -7,7 +7,7 @@ Focus Areas: FPGA Design, Hardware Design, Embedded Systems, Computer Architectu
 I’m passionate about hardware and embedded system design, with hands-on experience in FPGA development, PCB design, embedded programming, and hardware-software integration. My projects demonstrate proficiency in Verilog HDL, microcontroller programming, and system-level design thinking.
 
 ## Featured Projects
-- **[Air Quality Sensor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/)** - ESP32-based environmental monitoring system with multiple sensors and cloud connectivity  
+- **[Air Quality Sensor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/)** - IoT ESP32-based environmental monitoring system with multiple sensors and cloud connectivity  
 - **[UART Transceiver](./HDL_Projects/uart%20transceiver/)** - UART transceiver with ASCII display and echo functionality
 - **[Home Security System](./Embedded-Programing_Projects/CacheEmulator/semester-project-jordan_ricky-main/)** - Computer vision-based security system with camera detection and display interface
 - **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC/)** - ARM-like CPU simulation with custom ISA and compiler

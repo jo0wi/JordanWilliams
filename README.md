@@ -47,5 +47,5 @@ I’m passionate about hardware and embedded system design, with hands-on experi
 ---
 ### Contact 
 LinkedIn: www.linkedin.com/in/jordan-williams-029b55268     
-Email: Jordan.Williams2@uga.edu 
+Email: Jordan1296w@gmail.com 
 

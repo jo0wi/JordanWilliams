@@ -6,6 +6,10 @@
 //SSID NAME
 #ifdef USE_EAP
   const char* ssid = "**********"; // eduroam SSID
-#else 
+#else
   const char* ssid = "**********"; // home SSID
 #endif
+
+//ThingSpeak credentials
+#define THINGSPEAK_CHANNEL_NUMBER 2412781
+#define THINGSPEAK_WRITE_API_KEY "6R7GOKN3RL45D5RA"

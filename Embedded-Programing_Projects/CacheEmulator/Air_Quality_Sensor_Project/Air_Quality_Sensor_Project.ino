@@ -26,8 +26,8 @@ int lcdRows = 2;
 LiquidCrystal_I2C lcd(0x27, lcdColumns, lcdRows);
 
 //ThingSpeak info
-unsigned long myChannelNumber = 2412781; 
-const char * myWriteAPIKey = "6R7GOKN3RL45D5RA";
+unsigned long myChannelNumber = THINGSPEAK_CHANNEL_NUMBER;
+const char * myWriteAPIKey = THINGSPEAK_WRITE_API_KEY;
 
 
 // Initializing variables

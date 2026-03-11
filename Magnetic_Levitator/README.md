@@ -7,18 +7,9 @@ A closed-loop magnetic levitation system that suspends a permanent magnet in mid
 ## Demo
 
 <!-- PLACEHOLDER: Add a GIF or short video clip of the magnet levitating -->
-![Demo](IMG_0415.mov)
+![Levitation Demo Video](IMG_0415.mov)
 
 *Neodymium magnet suspended at 3 mm below solenoid, stabilized by closed-loop feedback*
-
----
-
-## Simulation / Waveforms
-
-<!-- PLACEHOLDER: Add screenshots of MATLAB/Simulink step response and controller Bode plot from finalliveformag.mlx -->
-![Waveform](./docs/waveform.png)
-
-*MATLAB step response showing controller settling behavior around the 2.05 V Hall sensor setpoint*
 
 ---
 

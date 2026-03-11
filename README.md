@@ -1,51 +1,65 @@
-# Jordan Williams – Electrical & FPGA Design Portfolio
+# Jordan Williams — Hardware Engineering Portfolio
 
-B.S. Electrical Engineering, University of Georgia (Expected 2026)  
-Focus Areas: FPGA Design, Hardware Design, Embedded Systems, Computer Architecture  
+**Electrical Engineering Student | FPGA | PCB Design | Embedded Systems**
+B.S. Electrical Engineering + Certificate in E-Mobility — University of Georgia — Graduating July 2026
 
-## About Me
-I’m passionate about hardware and embedded system design, with hands-on experience in FPGA development, PCB design, embedded programming, and hardware-software integration. My projects demonstrate proficiency in Verilog HDL, microcontroller programming, and system-level design thinking.
-
-## Featured Projects
-- **[Air Quality Sensor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/)** - IoT ESP32-based environmental monitoring system with multiple sensors and cloud connectivity  
-- **[FPGA UART Transceiver](./HDL_Projects/uart%20transceiver/)** - UART transceiver with ASCII display and echo functionality
-- **[Home Security System](./Embedded-Programing_Projects/CacheEmulator/semester-project-jordan_ricky-main/)** - Computer vision-based security system with camera detection and display interface
-- **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC/)** - ARM-like CPU simulation with custom ISA and compiler
-
-### Projects List
-- **[Cache Emulator](./Embedded-Programing_Projects/CacheEmulator/Cache_Emulator/)** - C-based cache simulator modeling set-associative caches with LRU replacement, analyzing memory trace performance
-- **[LED Blinker](./HDL_Projects/blinkLED/)** - Basic FPGA PWM generator implementing 1Hz LED blinking on Nexys-A7
-- **[Debounced Toggle Button](./HDL_Projects/debounce_toggle_btn/)** - FPGA project with mechanical button debouncing and toggle functionality
-- **[Seven Segment Display](./HDL_Projects/Digital_Design_Labs/Seven_Segment_Display/)** - Hexadecimal to seven-segment decoder with full digit support
-- **[Thunderbird Turn Signal](./HDL_Projects/Digital_Design_Labs/TBird_Turnsignal/)** - FSM implementation of classic sequential automobile turn signals
-- **[4-Bit Up/Down Counter](./HDL_Projects/Digital_Design_Labs/UpDownCounter_4bit/)** - Synchronous counter with direction control and enable
-- **[Seven Segment Counter](./HDL_Projects/seven_segment_cntr/)** - Synchronous seven-segment display driver for counter applications
-- **[UART Interface for ESP32](./HDL_Projects/UART_Interface_ESP_32/)** - Full-duplex UART implementation for FPGA-ESP32 communication
-- **[UART Transceiver](./HDL_Projects/uart%20transceiver/)** - UART transceiver with ASCII display and echo functionality
-- **[Verilog Single-Cycle CPU](./HDL_Projects/Verilog_SCC/)** - ARM-like CPU simulation with custom ISA and compiler
-- **[Reaction Timer](./HDL_Projects/Digital_Design_Labs/Final%20Project/)** - FPGA-based reaction timer with LCD display
-- **[VGA Controller](./HDL_Projects/VGA_Controller/)** - VGA controller module with image generation capabilities  
-- **[Air Quality Sensor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/)** - ESP32-based environmental monitoring system with multiple sensors and cloud connectivity
-- **[M5Stick Bluetooth Module](./Embedded-Programing_Projects/CacheEmulator/M5Stick_Bluetooth_mod/)** - BLE server implementation for wireless button input transmission
-- **[Home Security System](./Embedded-Programing_Projects/CacheEmulator/semester-project-jordan_ricky-main/)** - Computer vision-based security system with camera detection and display interface
-
-## Skills
-- **HDL Design:** Verilog, Vivado, ModelSim
-- **Embedded Programming:** C/C++, Python, Arduino, ESP32, Raspberry Pi
-- **Hardware Design:** Altium Designer, PCB Layout, Signal Integrity
-- **Tools:** MATLAB, Simulink, GTKWave, Git
-- **Protocols:** UART, SPI, I2C, BLE, VGA
-- **FPGA Platforms:** Xilinx (Nexys-A7, Basys-3), Intel/Altera
-
-## Coursework Highlights
-- Digital Design & Computer Architecture
-- Embedded Systems Programming
-- PCB Design & Manufacturing
-- Control Systems
-- Signal Processing
+[LinkedIn](https://www.linkedin.com/in/jordan-williams-029b55268) | [GitHub](https://github.com/jo0wi/JordanWilliams/tree/main) | jordan1296w@gmail.com
 
 ---
-### Contact 
-LinkedIn: www.linkedin.com/in/jordan-williams-029b55268     
-Email: Jordan1296w@gmail.com 
 
+## About Me
+
+I am a final-year Electrical Engineering student at the University of Georgia specializing in FPGA development, PCB design, and embedded systems. I have hands-on experience designing hardware from RTL to bitstream in Vivado, building sensor networks on ESP32, and contributing to a 6U CubeSat mission at the UGA Small Satellite Research Laboratory. For my senior capstone, I am designing an 8-module, 660 V, ~1,000-cell high-voltage battery accumulator for the UGA FSAE Electric Vehicle team.
+
+---
+
+## Skills
+
+| Category | Tools / Technologies |
+|----------|---------------------|
+| HDL | Verilog |
+| FPGA | Nexys A7-100T (Artix-7), Basys3, Vivado |
+| PCB Design | Altium Designer |
+| Embedded | ESP32, Raspberry Pi Pico (RP2040), Arduino (C/C++), MicroPython, Serial / I2C / SPI |
+| Communication Protocols | UART, I2C, SPI, USB, WiFi (WPA2/WPA2-Enterprise) |
+| Languages | C/C++, Python, Verilog |
+| Simulation | Icarus Verilog, GTKWave, Vivado Simulator (xsim) |
+| Other | MATLAB, Git |
+
+---
+
+## Featured Projects
+
+| Project | Platform | Description |
+|---------|----------|-------------|
+| [UART Transceiver](./HDL_Projects/uart%20transceiver/) | Nexys A7-100T | Full-duplex UART at 115200 baud — echoes keystrokes from PuTTY to terminal and displays received byte in hex on seven-segment display |
+| [VGA Controller](./HDL_Projects/VGA_Controller/) | Nexys A7-100T | 640x480 @ 60 Hz VGA timing engine with 8-column rainbow color bar test pattern |
+| [Single-Cycle CPU](./HDL_Projects/Verilog_SCC/Final/) | Icarus Verilog | 32-bit single-cycle CPU with ARM-Educore ISA — IF/ID/EXE/MEM/WB datapath, 16 registers, multiply microcode, self-checking testbench |
+| [ESP32 Air Quality Monitor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/) | ESP32 | Multi-sensor IoT monitor (BMP280, DHT11, thermistor, dust sensor) with I2C LCD and ThingSpeak cloud push every ~6 seconds |
+| [Magnetic Levitator](./Magnetic_Levitator/) | Raspberry Pi Pico (RP2040) | Closed-loop magnetic levitation system with cascaded PD + discrete lead compensator — suspends a neodymium magnet at a 3 mm gap using Hall effect feedback and PWM-controlled solenoid |
+| LDO Power Supply PCB | Custom PCB (Altium) | 12 V to 5 V LDO using LM1085IT 3 A (Texas Instruments), designed in Altium Designer *(separate repo)* |
+
+---
+
+## Experience
+
+### UGA Small Satellite Research Laboratory (SSRL) — Feb 2024–Present
+**Hardware Team Member** | MOCI 6U CubeSat Mission
+
+- Contributing to the MOCI (Multi-spectral Occultation and Cloud Imager) 6U CubeSat mission at UGA's Small Satellite Research Laboratory
+- Working on flight hardware development and integration for a student-built satellite
+
+### UGA Formula SAE Electric Vehicle — Capstone Project
+**High-Voltage Accumulator Design**
+
+- Designing an 8-module, 660 V battery accumulator using approximately 1,000 18650 lithium cells
+- Total pack energy: 12.33 kWh
+- Responsible for module-level electrical design and cell configuration
+
+---
+
+## Education
+
+**University of Georgia** — Athens, GA
+- B.S. Electrical Engineering — July 2026
+- Certificate in E-Mobility — July 2026

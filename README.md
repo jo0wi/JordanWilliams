@@ -3,63 +3,70 @@
 **Electrical Engineering Student | FPGA | PCB Design | Embedded Systems**
 B.S. Electrical Engineering + Certificate in E-Mobility — University of Georgia — Graduating July 2026
 
-[LinkedIn](https://www.linkedin.com/in/jordan-williams-029b55268) | [GitHub](https://github.com/jo0wi/JordanWilliams/tree/main) | jordan1296w@gmail.com
+[LinkedIn](https://www.linkedin.com/in/jordan-williams-029b55268) | jordan1296w@gmail.com | (770) 241-4475
 
 ---
 
 ## About Me
 
-I am a final-year Electrical Engineering student at the University of Georgia specializing in FPGA development, PCB design, and embedded systems. I have hands-on experience designing hardware from RTL to bitstream in Vivado, building sensor networks on ESP32, and contributing to a 6U CubeSat mission at the UGA Small Satellite Research Laboratory. For my senior capstone, I am designing an 8-module, 660 V, ~1,000-cell high-voltage battery accumulator for the UGA FSAE Electric Vehicle team.
+I am a final-year Electrical Engineering student at the University of Georgia specializing in FPGA digital design, PCB layout, and embedded systems. I have hands-on experience designing hardware from RTL to bitstream in Vivado, implementing closed-loop control systems on embedded platforms, and contributing to flight hardware for a 6U CubeSat mission at the UGA Small Satellite Research Laboratory. For my senior capstone, I designed an 8-module, 660V, ~1,000-cell high-voltage battery accumulator for UGA's inaugural FSAE Electric Vehicle.
+
+I am actively seeking full-time hardware, digital design, or embedded systems engineering roles starting Summer/Fall 2026.
 
 ---
 
 ## Skills
 
 | Category | Tools / Technologies |
-|----------|---------------------|
-| HDL | Verilog |
-| FPGA | Nexys A7-100T (Artix-7), Basys3, Vivado |
-| PCB Design | Altium Designer |
-| Embedded | ESP32, Raspberry Pi Pico (RP2040), Arduino (C/C++), MicroPython, Serial / I2C / SPI |
-| Communication Protocols | UART, I2C, SPI, USB, WiFi (WPA2/WPA2-Enterprise) |
-| Languages | C/C++, Python, Verilog |
-| Simulation | Icarus Verilog, GTKWave, Vivado Simulator (xsim) |
-| Other | MATLAB, Git |
+|---|---|
+| **HDL** | Verilog |
+| **FPGA** | Nexys A7-100T (Artix-7), Basys3, Xilinx Vivado |
+| **PCB Design** | Altium Designer (Schematic Capture, Layout, BOM Generation), LTSpice |
+| **Embedded** | C/C++, MicroPython, Arduino, ESP32, Raspberry Pi Pico (RP2040), Raspberry Pi |
+| **Protocols** | UART, I2C, SPI, USB, BLE / Bluetooth, WiFi / IoT |
+| **Languages** | Verilog, C/C++, Python, MATLAB / Simulink |
+| **Simulation & EDA** | Xilinx Vivado, ModelSim, GTKWave, Icarus Verilog |
+| **Lab Equipment** | Oscilloscopes, DMMs, Function Generators, Power Supplies, Soldering, PCB Assembly |
+| **Other** | Git / GitHub, PLC Programming |
 
 ---
 
 ## Featured Projects
 
 | Project | Platform | Description |
-|---------|----------|-------------|
+|---|---|---|
 | [UART Transceiver](./HDL_Projects/uart%20transceiver/) | Nexys A7-100T | Full-duplex UART at 115200 baud — echoes keystrokes from PuTTY to terminal and displays received byte in hex on seven-segment display |
-| [VGA Controller](./HDL_Projects/VGA_Controller/) | Nexys A7-100T | 640x480 @ 60 Hz VGA timing engine with 8-column rainbow color bar test pattern |
-| [Single-Cycle CPU](./HDL_Projects/Verilog_SCC/Final/) | Icarus Verilog | 32-bit single-cycle CPU with ARM-Educore ISA — IF/ID/EXE/MEM/WB datapath, 16 registers, multiply microcode, self-checking testbench |
-| [ESP32 Air Quality Monitor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/) | ESP32 | Multi-sensor IoT monitor (BMP280, DHT11, thermistor, dust sensor) with I2C LCD and ThingSpeak cloud push every ~6 seconds |
-| [Magnetic Levitator](./Magnetic_Levitator/) | Raspberry Pi Pico (RP2040) | Closed-loop magnetic levitation system with cascaded PD + discrete lead compensator — suspends a neodymium magnet at a 3 mm gap using Hall effect feedback and PWM-controlled solenoid |
-| LDO Power Supply PCB | Custom PCB (Altium) | 12 V to 5 V LDO using LM1085IT 3 A (Texas Instruments), designed in Altium Designer *(separate repo)* |
+| [Single-Cycle CPU](./HDL_Projects/Verilog_SCC/Final/) | Icarus Verilog / Vivado | 32-bit single-cycle processor with ARM-Educore ISA — full datapath (IF/ID/EXE/MEM/WB), 16 registers, multiply microcode, self-checking testbench |
+| [VGA Controller](./HDL_Projects/VGA_Controller/) | Nexys A7-100T | 640×480 @ 60 Hz VGA timing engine with 8-column rainbow color bar test pattern |
+| [Magnetic Levitator](./Magnetic_Levitator/) | Raspberry Pi Pico (RP2040) | Closed-loop levitation system with cascaded PD + discrete lead compensator suspending a neodymium magnet at a 3 mm gap using Hall effect feedback and 10 kHz PWM-controlled solenoid; plant modeled in MATLAB |
+| [ESP32 Environmental Monitor](./Embedded-Programing_Projects/CacheEmulator/Air_Quality_Sensor_Project/) | ESP32 | Multi-sensor IoT monitor (BMP280, DHT11, thermistor, dust sensor) with I2C LCD and ThingSpeak cloud push every 5 minutes over WiFi |
 
 ---
 
 ## Experience
 
 ### UGA Small Satellite Research Laboratory (SSRL) — Feb 2024–Present
-**Hardware Team Member** | MOCI 6U CubeSat Mission
+**Electrical Hardware Team Member** | MOCI 6U CubeSat Mission | Athens, GA
 
-- Contributing to the MOCI (Multi-spectral Occultation and Cloud Imager) 6U CubeSat mission at UGA's Small Satellite Research Laboratory
-- Working on flight hardware development and integration for a student-built satellite
+- Designing, reviewing, and implementing electronics for the Multi-view Onboard Computational Imager (MOCI) 6U CubeSat mission
+- Directly designed and assembled a flight-candidate PCB for mission-critical subsystems
+- Developing the satellite wiring harness and authored a Safe-to-Mate assembly procedure based on NASA standards
+- Repaired tracking dish motors and drive electronics to restore ground station operations
+- Created procedure documentation to standardize hardware workflows and support team onboarding
 
-### UGA Formula SAE Electric Vehicle — Capstone Project
-**High-Voltage Accumulator Design**
+### UGA Formula SAE Electric Vehicle — Fall 2025–Spring 2026
+**High-Voltage Accumulator Design** | Electrical Engineering Capstone
 
-- Designing an 8-module, 660 V battery accumulator using approximately 1,000 18650 lithium cells
-- Total pack energy: 12.33 kWh
-- Responsible for module-level electrical design and cell configuration
+- Designed an 8-module, 660V HV battery accumulator (~1,000 18650 Li-ion cells, 12.33 kWh) for UGA's inaugural FSAE EV
+- Performed cell configuration analysis and power draw calculations to meet powertrain energy and current requirements
+- Conducted fusible link testing between cells and bus bar to validate overcurrent protection under simulated fault conditions
 
 ---
 
 ## Education
 
 **University of Georgia** — Athens, GA
-- B.S. Electrical Engineering — July 2026
-- Certificate in E-Mobility — July 2026
+- B.S. Electrical Engineering — Expected July 2026
+- Certificate in E-Mobility — Expected July 2026
+
+**Relevant Coursework:** Digital Systems Design, Embedded Systems, Digital Signal Processing, Signals & Systems, Electronics I & II, Microelectronics, Control Systems

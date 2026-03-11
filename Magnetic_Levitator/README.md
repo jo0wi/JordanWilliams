@@ -7,7 +7,7 @@ A closed-loop magnetic levitation system that suspends a permanent magnet in mid
 ## Demo
 
 <!-- PLACEHOLDER: Add a GIF or short video clip of the magnet levitating -->
-![Levitation Demo Video](DemoGif.gif)
+![Levitation Demo Video](MagLevFiles/DemoGif.gif)
 
 *Neodymium magnet suspended at 3 mm below solenoid, stabilized by closed-loop feedback*
 

@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/JordanWilliams -type d -iname *magnet* -o -type d -iname *levitat*)",
+      "Bash(file /c/JordanWilliams/Magnetic_Levitator/*.mlx /c/JordanWilliams/Magnetic_Levitator/*.pdf /c/JordanWilliams/Magnetic_Levitator/*.tex)"
+    ]
+  }
+}

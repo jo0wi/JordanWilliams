@@ -4,22 +4,6 @@ A 32-bit single-cycle CPU implemented in Verilog with a custom ARM-Educore-style
 
 ---
 
-## Demo
-
-<!-- PLACEHOLDER: Capture a GTKWave screenshot showing clk, rst, programCounter incrementing by 4, halt_f asserting at program end, and key register writes across a bubble sort or float-add run. -->
-![Demo](./docs/demo.png)
-
-*GTKWave waveform showing the SCC executing a test program and asserting HALT after completion*
-
----
-
-## Simulation / Waveforms
-
-<!-- PLACEHOLDER: Capture a GTKWave screenshot showing instruction_memory_v (fetched instruction), ALU result wire, and register write-back across several clock cycles for the test_case program. -->
-![Waveform](./docs/waveform.png)
-
----
-
 ## Architecture
 
 ```

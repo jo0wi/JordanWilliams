@@ -17,24 +17,24 @@ A closed-loop magnetic levitation system that suspends a permanent magnet in mid
 
 ```
                    ┌──────────────────────────────────────────┐
-                   │           Raspberry Pi Pico (RP2040)      │
-                   │                                           │
-  Hall Sensor ─────┤ ADC0 (GP26)                               │
-  (position)       │      │                                    │
-                   │      ▼                                    │
-                   │  Outer Loop: PD Position Controller       │
-                   │  error = TARGET_V(2.05V) - V_hall         │
+                   │           Raspberry Pi Pico (RP2040)     │
+                   │                                          │
+  Hall Sensor ─────┤ ADC0 (GP26)                              │
+  (position)       │      │                                   │
+                   │      ▼                                   │
+                   │  Outer Loop: PD Position Controller      │
+                   │  error = TARGET_V(2.05V) - V_hall        │
                    │  desired_current = Kp·e + Kd·ė           │
-                   │      │                                    │
-  Shunt Op-Amp ────┤ ADC1 (GP27)                               │
-  (current sense)  │      │                                    │
-                   │      ▼                                    │
-                   │  Inner Loop: Discrete Lead Compensator    │
-                   │  error_i = desired_current - I_measured   │
-                   │  u[k] = b0·e[k] + b1·e[k-1] - a1·u[k-1] │
-                   │      │                                    │
-                   │      ▼                                    │
-                   │  PWM Output (GP16) @ 10 kHz               │
+                   │      │                                   │
+  Shunt Op-Amp ────┤ ADC1 (GP27)                              │
+  (current sense)  │      │                                   │
+                   │      ▼                                   │
+                   │  Inner Loop: Discrete Lead Compensator   │
+                   │  error_i = desired_current - I_measured  │
+                   │  u[k] = b0·e[k] + b1·e[k-1] - a1·u[k-1]  │
+                   │      │                                   │
+                   │      ▼                                   │
+                   │  PWM Output (GP16) @ 10 kHz              │
                    └──────────────────┬───────────────────────┘
                                       │ PWM duty cycle
                                       ▼
@@ -46,8 +46,8 @@ A closed-loop magnetic levitation system that suspends a permanent magnet in mid
                                       ▼
                               ┌───────────────┐
                               │ 429-turn      │        ┌──────────────┐
-                              │ Solenoid      │◄───────│ 9V Supply    │
-                              │ (Electromagnet)│        └──────────────┘
+                              │ Solenoid      │◄───────│ 32V Supply   │
+                              │(Electromagnet)│        └──────────────┘
                               └───────┬───────┘
                                       │ Magnetic force (upward)
                                       ▼

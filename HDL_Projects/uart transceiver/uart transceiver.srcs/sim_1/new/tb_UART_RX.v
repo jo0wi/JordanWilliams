@@ -39,5 +39,6 @@ initial begin
     @(posedge Clk);
     UART_SEND_BYTE(8'hAF);
     repeat(50)@(posedge Clk);
+    $finish;
 end
 endmodule

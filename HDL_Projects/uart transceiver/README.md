@@ -16,7 +16,7 @@ A full-duplex UART transceiver implemented in Verilog and deployed on the Nexys 
 ## Simulation / Waveforms
 
 <!-- PLACEHOLDER: Capture a screenshot of the tb_UART_transceiver Vivado waveform. Show UART_TXD_IN going low (start bit), 8 data bits for 0xAF, stop bit, and UART_RXD_OUT echoing the same frame. -->
-![Waveform](./docs/waveform.png)
+![Waveform](./docs/UART_Transceiver_Waveform.png)
 
 ---
 

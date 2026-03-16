@@ -4,14 +4,6 @@ A multi-sensor IoT air quality monitor implemented in C++ (Arduino framework) on
 
 ---
 
-## Demo
-
-<!-- PLACEHOLDER: Capture a photo of the ESP32 breadboard setup with the LCD showing temperature/humidity, BMP280 sensor, DHT11 sensor, and dust sensor wired in. A screenshot of the ThingSpeak channel graphs is also ideal. -->
-![Demo](./docs/demo.jpg)
-
-*ESP32 board with LCD displaying live temperature and humidity readings*
-
----
 
 ## Architecture
 

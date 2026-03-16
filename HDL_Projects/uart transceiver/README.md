@@ -7,7 +7,7 @@ A full-duplex UART transceiver implemented in Verilog and deployed on the Nexys 
 ## Demo
 
 <!-- PLACEHOLDER: Capture a GIF or short video of PuTTY with characters being typed, echoing back, and the 7-segment display updating in real time. A photo of the Nexys A7 board with the display lit is also great. -->
-![Demo](./docs/demo.gif)
+![Demo](./docs/UART_Transceiver_Demo.gif)
 
 *PuTTY echoing each keystroke while the seven-segment display shows the received byte in hex*
 

@@ -112,7 +112,7 @@ Magnetic_Levitator/
 | Shunt op-amp pin | ADC1 — GPIO 27 |
 | PWM output pin | GPIO 16 |
 | MOSFET | IRLZ44N N-channel |
-| Power supply | 9 V |
+| Power supply | 32 V |
 | Course | ELEE4220 — Feedback Control Systems |
 
 ---
@@ -153,7 +153,7 @@ The cascaded controller achieves temporary stable levitation. Long-term stabilit
 ### Requirements
 - Raspberry Pi Pico flashed with MicroPython firmware
 - [Thonny IDE](https://thonny.org/) or `mpremote`
-- 9 V DC power supply connected to solenoid circuit
+- 32 V DC power supply connected to solenoid circuit
 - Hall effect sensor, IRLZ44N MOSFET, and 0.185 Ω shunt wired per schematic
 
 ### Steps
@@ -164,7 +164,7 @@ The cascaded controller achieves temporary stable levitation. Long-term stabilit
    - Hall sensor output → GP26 (ADC0)
    - Shunt op-amp output → GP27 (ADC1)
    - MOSFET gate → GP16 (PWM)
-   - Solenoid and 9 V supply in series with the 0.185 Ω shunt through the MOSFET drain
+   - Solenoid and 32 V supply in series with the 0.185 Ω shunt through the MOSFET drain
 4. **For single-loop PD only**, open `3magnets.py` and run it. Hold the magnet ~5–10 mm below the solenoid before the 0.2 s startup pulse completes.
 5. **For full cascaded control**, use `3mags2controllers.py` — same startup procedure.
 6. Monitor serial output for `V: | E: | D: | PWM:` debug lines to verify the control loop is tracking toward 2.05 V.

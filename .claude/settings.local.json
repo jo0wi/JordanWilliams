@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip3 install:*)",
+      "Bash(python -m pip install git-filter-repo)",
+      "Bash(python3 -m pip install git-filter-repo)",
+      "Bash(where java:*)"
+    ]
+  }
+}

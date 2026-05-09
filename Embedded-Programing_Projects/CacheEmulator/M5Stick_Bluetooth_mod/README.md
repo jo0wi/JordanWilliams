@@ -1,63 +1,89 @@
-# M5StickC Plus BLE Button — Arduino / ESP32
+# M5Stick Bluetooth Module
 
-A Bluetooth Low Energy (BLE) GATT server running on the M5StickC Plus that streams the front-button state to any connected client over a notify-capable characteristic. Used as the lab-4 Bluetooth exercise in the ELEE 2045 Embedded Systems course.
+A Bluetooth Low Energy (BLE) server implementation for M5StickC Plus that demonstrates wireless communication and button input transmission. This project showcases embedded Bluetooth connectivity and real-time data streaming.
 
----
+## Features
 
-## Project Structure
+- BLE server with custom service and characteristic UUIDs
+- Button press detection and transmission
+- Connection status monitoring
+- Optimized Bluetooth connection parameters for faster data transfer
+- Automatic advertising restart on disconnection
+- IMU initialization (for future sensor integration)
 
-| File | Description |
-|------|-------------|
-| `bluetoothex_ino.ino` | Arduino sketch — BLE server, characteristic, button-poll-and-notify loop |
-| `debug.cfg` | OpenOCD configuration for ESP32 hardware debugging |
-| `debug_custom.json` | VS Code launch configuration |
-| `esp32.svd` | ESP32 System View Description for register-aware debugging |
+## Hardware Components
 
----
+- M5StickC Plus microcontroller
+- Built-in button (GPIO 37)
+- Integrated IMU (MPU6886) - initialized but not used in current implementation
+- Bluetooth 4.2 module (integrated)
 
-## Specifications
+## Technologies Used
 
-| Parameter | Value |
-|-----------|-------|
-| Microcontroller | M5StickC Plus (ESP32-PICO) |
-| Framework | Arduino (C++) |
-| Bluetooth | BLE 4.2 GATT server |
-| Advertised name | `M5StickCPlus-Jordan` |
-| Service UUID | `e6e84dae-5a39-4c07-9a4b-ae031d4d4cd7` |
-| Characteristic UUID | `5130bfef-4533-4945-91c0-a2dfed90bffa` |
-| Characteristic properties | Read, Notify |
-| Min preferred connection interval | 0x06 (7.5 ms) |
-| Max preferred connection interval | 0x0C (15 ms) |
-| Button input | Front button on GPIO 37 |
-| Payload | 1-byte struct: `{ uint8_t buttonA; }` (1 = pressed, 0 = released) |
+- Arduino IDE / ESP32 framework
+- C++ programming
+- Bluetooth Low Energy (BLE) protocol
+- ESP32 BLE libraries
+- M5StickC Plus SDK
 
----
+## Setup Instructions
 
-## How It Works
+1. Install M5StickC Plus board support in Arduino IDE
+2. Install required libraries:
+   - M5StickCPlus
+   - BLEDevice
+   - BLEServer
+   - BLEUtils
+   - BLE2902
 
-On boot the sketch initializes the M5StickC Plus, configures the IMU, creates a BLE server and service, and exposes a single characteristic with both read and notify properties. It then begins advertising under the device name `M5StickCPlus-Jordan`. When a client connects, the main loop debounces the front button on GPIO 37 (logic-inverted to give 1 = pressed) and calls `notify()` on every iteration so the client receives real-time button updates. If the client disconnects, the loop calls `startAdvertising()` again so the device is rediscoverable without a manual reset.
+3. Connect M5StickC Plus via USB
+4. Select board: M5Stick-C-Plus
+5. Upload the code
 
-The advertised connection interval is intentionally short (7.5-15 ms) to minimize button-press-to-receive latency.
+## Usage
 
----
+1. Power on the M5StickC Plus
+2. The device will start advertising as "M5StickCPlus-Jordan"
+3. Use a BLE scanner app (like nRF Connect) on another device
+4. Connect to the advertised service
+5. Monitor the characteristic for button press notifications
+6. Press the front button to send data (1 for pressed, 0 for released)
 
-## How to Run
+## BLE Configuration
 
-1. Install the **M5StickC Plus** board package and the libraries `M5StickCPlus`, `BLEDevice`, `BLEServer`, `BLEUtils`, and `BLE2902` in the Arduino IDE.
-2. Open `bluetoothex_ino.ino`, select board `M5Stick-C-Plus`, choose the correct COM port, and upload.
-3. On a phone or laptop, open a BLE scanner (e.g. **nRF Connect**), find `M5StickCPlus-Jordan`, and connect.
-4. Subscribe to notifications on characteristic `5130bfef-4533-4945-91c0-a2dfed90bffa`.
-5. Press the front button — observe the value alternate between `0x01` (pressed) and `0x00` (released).
+- **Service UUID**: e6e84dae-5a39-4c07-9a4b-ae031d4d4cd7
+- **Characteristic UUID**: 5130bfef-4533-4945-91c0-a2dfed90bffa
+- **Properties**: Read, Notify
+- **Connection Parameters**: Min interval 6, Max interval 12 (for faster response)
 
----
-
-## Packet Layout
+## Data Packet Structure
 
 ```cpp
 #pragma pack(1)
 typedef struct {
-    uint8_t buttonA;   // 1 = pressed, 0 = released
+  uint8_t buttonA;  // 1 = pressed, 0 = released
 } Packet;
 ```
 
-Packed-byte struct so the same definition can be reused on both ESP32 and Python clients without alignment surprises.
+## Applications
+
+- Wireless input device
+- Remote control systems
+- IoT button sensor
+- BLE prototyping and testing
+- Embedded system communication
+
+## Debug Files
+
+- `debug.cfg`: OpenOCD configuration for debugging
+- `debug_custom.json`: VS Code debug configuration
+- `esp32.svd`: ESP32 System View Description for debugging
+
+## Future Enhancements
+
+- Add IMU data transmission (accelerometer, gyroscope)
+- Implement multiple buttons
+- Add battery level monitoring
+- Create custom BLE client application
+- Add encryption and security features
+- Implement over-the-air (OTA) updates

@@ -68,23 +68,21 @@ A closed-loop magnetic levitation system that suspends a permanent magnet in mid
 
 ```
 Magnetic_Levitator/
-├── MagLev_FinalReport.pdf       # Compiled final report (top-level for quick access)
-├── finalliveformag.mlx          # MATLAB Live Script — plant modeling and controller design
-└── MagLevFiles/
-    ├── 3magnets.py              # Final PD controller — 3-magnet stack configuration
-    ├── 3mags2controllers.py     # Cascaded PD + lead compensator — dual-loop final design
-    ├── Final_Report.tex         # LaTeX source for ELEE 4220 final project report
-    ├── DemoGif.gif              # Levitation demo (also embedded above)
-    ├── IMG_0415.mov             # Video of levitation demo
-    ├── milestone 2/
-    │   └── levitator.py         # ADC baseline — reads and prints Hall sensor voltage only
-    ├── milestone3/
-    │   ├── controller.py        # Discrete difference-equation controller (3rd-order)
-    │   ├── simple.py            # Basic P-only controller for initial hardware validation
-    │   ├── mosfettest.py        # PWM duty sweep to verify MOSFET and solenoid wiring
-    │   └── test.py              # Combined PWM sweep + Hall sensor characterization
-    └── milestone 4/
-        └── P.py                 # Placeholder (empty)
+├── 3magnets.py              # Final PD controller — 3-magnet stack configuration
+├── 3mags2controllers.py     # Cascaded PD + lead compensator — dual-loop final design
+├── Final_Report.tex         # LaTeX source for ELEE4220 final project report
+├── MagLev_FinalReport.pdf   # Compiled final report
+├── finalliveformag.mlx      # MATLAB Live Script — plant modeling and controller design
+├── IMG_0415.mov             # Video of levitation demo
+├── milestone 2/
+│   └── levitator.py         # ADC baseline — reads and prints Hall sensor voltage only
+├── milestone3/
+│   ├── controller.py        # Discrete difference-equation controller (3rd-order)
+│   ├── simple.py            # Basic P-only controller for initial hardware validation
+│   ├── mosfettest.py        # PWM duty sweep to verify MOSFET and solenoid wiring
+│   └── test.py              # Combined PWM sweep + Hall sensor characterization
+└── milestone 4/
+    └── P.py                 # Placeholder (empty)
 ```
 
 ---
@@ -114,7 +112,7 @@ Magnetic_Levitator/
 | Shunt op-amp pin | ADC1 — GPIO 27 |
 | PWM output pin | GPIO 16 |
 | MOSFET | IRLZ44N N-channel |
-| Power supply | 9 V |
+| Power supply | 32 V |
 | Course | ELEE4220 — Feedback Control Systems |
 
 ---
@@ -143,10 +141,10 @@ The cascaded controller achieves temporary stable levitation. Long-term stabilit
 
 | File | Purpose | How to Run |
 |---|---|---|
-| `MagLevFiles/milestone3/mosfettest.py` | Sweeps PWM duty 0→65535 in steps to verify MOSFET gate drive and solenoid response | Flash to Pico via Thonny; observe current draw on bench supply |
-| `MagLevFiles/milestone3/test.py` | Simultaneously sweeps PWM and logs Hall sensor voltage at each step | Flash to Pico; copy printed table to characterize Hall vs. duty curve |
-| `MagLevFiles/milestone 2/levitator.py` | Reads and prints raw Hall sensor voltage only — no actuation | Use to verify sensor wiring and map voltage to physical position |
-| `MagLevFiles/milestone3/simple.py` | P-only controller (Kp = 20,000) for initial stability trials | Flash and hold magnet near sensor; observe if it catches |
+| `milestone3/mosfettest.py` | Sweeps PWM duty 0→65535 in steps to verify MOSFET gate drive and solenoid response | Flash to Pico via Thonny; observe current draw on bench supply |
+| `milestone3/test.py` | Simultaneously sweeps PWM and logs Hall sensor voltage at each step | Flash to Pico; copy printed table to characterize Hall vs. duty curve |
+| `milestone 2/levitator.py` | Reads and prints raw Hall sensor voltage only — no actuation | Use to verify sensor wiring and map voltage to physical position |
+| `milestone3/simple.py` | P-only controller (Kp = 20,000) for initial stability trials | Flash and hold magnet near sensor; observe if it catches |
 
 ---
 
@@ -155,7 +153,7 @@ The cascaded controller achieves temporary stable levitation. Long-term stabilit
 ### Requirements
 - Raspberry Pi Pico flashed with MicroPython firmware
 - [Thonny IDE](https://thonny.org/) or `mpremote`
-- 9 V DC power supply connected to solenoid circuit
+- 32 V DC power supply connected to solenoid circuit
 - Hall effect sensor, IRLZ44N MOSFET, and 0.185 Ω shunt wired per schematic
 
 ### Steps
@@ -166,9 +164,9 @@ The cascaded controller achieves temporary stable levitation. Long-term stabilit
    - Hall sensor output → GP26 (ADC0)
    - Shunt op-amp output → GP27 (ADC1)
    - MOSFET gate → GP16 (PWM)
-   - Solenoid and 9 V supply in series with the 0.185 Ω shunt through the MOSFET drain
-4. **For single-loop PD only**, open `MagLevFiles/3magnets.py` and run it. Hold the magnet ~5–10 mm below the solenoid before the 0.2 s startup pulse completes.
-5. **For full cascaded control**, use `MagLevFiles/3mags2controllers.py` — same startup procedure.
+   - Solenoid and 32 V supply in series with the 0.185 Ω shunt through the MOSFET drain
+4. **For single-loop PD only**, open `3magnets.py` and run it. Hold the magnet ~5–10 mm below the solenoid before the 0.2 s startup pulse completes.
+5. **For full cascaded control**, use `3mags2controllers.py` — same startup procedure.
 6. Monitor serial output for `V: | E: | D: | PWM:` debug lines to verify the control loop is tracking toward 2.05 V.
 
 <!-- PLACEHOLDER: Add a wiring diagram photo or Fritzing schematic showing solenoid, MOSFET, shunt, op-amp, and Pico pinout -->

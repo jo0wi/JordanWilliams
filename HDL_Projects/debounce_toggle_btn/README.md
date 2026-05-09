@@ -1,43 +1,64 @@
-# Debounced Toggle Button — Nexys A7-100T (Verilog / Vivado)
+# Debounced Toggle Button
 
-A button-debouncer paired with an edge-triggered LED toggle. The debouncer rejects mechanical contact bounce by requiring the input to remain stable for 1 ms before the filtered output changes; the toggle module then flips the LED on each clean falling edge of the filtered signal.
+An FPGA project implementing a debounced toggle button with LED output. This design demonstrates digital signal processing techniques for handling mechanical button bounce and state machine design for toggle functionality.
 
----
+## Features
 
-## Project Structure
+- Mechanical button debouncing (1ms filter)
+- Toggle LED on button press
+- Edge detection for press events
+- Synchronous design with clock domain
 
-| File | Description |
-|------|-------------|
-| `sources_1/new/debounce_btn.v` | `debounce` module — 27-bit counter that rejects bounces shorter than 1 ms at 100 MHz |
-| `sources_1/new/toggle_btn.v` | `toggle_btn` top — instantiates the debouncer, captures previous state, toggles the LED on the falling edge of the filtered button |
+## Technologies Used
 
----
+- Verilog HDL
+- Xilinx Vivado Design Suite
+- FPGA synthesis and implementation
+- Nexys-A7 development board
 
-## Specifications
+## Hardware Requirements
 
-| Parameter | Value |
-|-----------|-------|
-| FPGA Board | Nexys A7-100T (Artix-7) |
-| System Clock | 100 MHz |
-| Debounce window | 1 ms (`cycle_limit = 1_000_000`) |
-| Counter width | 27 bits |
-| Active edge for toggle | Falling edge of debounced signal |
-| Tool | Vivado |
-| Language | Verilog |
+- Nexys-A7 FPGA board
+- Push button switch
+- LED for output indication
 
----
+## Implementation Details
 
-## How It Works
+### Debounce Module
+- Uses a 27-bit counter for timing
+- Filters out bounces for 1ms at 100 MHz clock
+- Synchronous state machine design
 
-**Debouncer.** Each clock cycle the module compares the raw input `c_btn` to the latched state `btn_state`. If they disagree it increments a 27-bit counter; the counter resets to 0 the moment the input matches the latched state again. Only when the inputs disagree continuously for `cycle_limit` cycles (1 ms) does `btn_state` adopt the new value. This rejects narrow bounces while still allowing legitimate transitions through with a fixed 1 ms latency.
+### Toggle Module
+- Detects falling edge of debounced button signal
+- Toggles LED state on each valid press
+- Prevents multiple toggles during single press
 
-**Toggle.** The top module registers the debouncer output and watches for a `1 -> 0` transition (button release). On detection, it inverts the LED register. Using a single edge prevents multiple toggles from a single press.
+## File Structure
 
----
+- `debounce_btn.v`: Debouncing logic implementation
+- `toggle_btn.v`: Toggle functionality and top-level integration
+- Vivado project files (.xpr, .cache, .hw, .runs, .srcs)
 
-## How to Run
+## Key Parameters
 
-1. Open `debounce_toggle_btn.xpr` in Vivado.
-2. Verify `toggle_btn.v` is the top module and the Nexys A7 XDC is included.
-3. Run **Synthesis -> Implementation -> Generate Bitstream** and program the board.
-4. Press any onboard pushbutton — the assigned LED should toggle exactly once per press, with no flicker.
+- Clock frequency: 100 MHz
+- Debounce time: 1 ms (1,000,000 clock cycles)
+- Counter width: 27 bits
+
+## Synthesis and Implementation
+
+1. Open the project in Xilinx Vivado
+2. Run Synthesis
+3. Run Implementation
+4. Generate Bitstream
+5. Program the FPGA
+
+## Learning Outcomes
+
+This project covers:
+- Digital filtering techniques
+- Edge detection circuits
+- State machine design
+- Module instantiation and hierarchy
+- Timing constraints for reliable operation

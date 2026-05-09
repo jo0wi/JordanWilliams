@@ -1,62 +1,48 @@
-# Primitive Gates Implementation
+# Primitive Gates — Verilog / Vivado
 
-A collection of basic digital logic gates implemented in Verilog HDL. This project demonstrates fundamental gate-level design and testbench development for verification.
+Hand-written Verilog implementations of two-input AND and OR gates with self-checking testbenches. The first lab in the ELEE 4280 Digital Systems Design sequence — establishes the project / simulation / synthesis flow in Vivado before moving on to multi-module designs.
 
-## Features
+> **Folder name note:** `primative_gates` is a misspelling of *primitive*; the directory name is preserved to keep existing Vivado project paths intact.
 
-- 2-input AND gate implementation
-- 2-input OR gate implementation
-- Comprehensive testbenches for each gate
-- Behavioral modeling
-- Timing simulation support
+---
 
-## Technologies Used
+## Project Structure
 
-- Verilog HDL
-- Xilinx Vivado Design Suite
-- Digital logic simulation
-- Testbench development
+| File | Description |
+|------|-------------|
+| `sources_1/new/AND2_Gate.v` | `AND2_Gate(A, B, F)` — `F = A & B` in a sensitivity-list always block |
+| `sources_1/new/OR2_Gate.v` | `OR2_Gate(A, B, F)` — `F = A \| B` in a sensitivity-list always block |
+| `sources_1/new/AND2gate_tb.v` | Walk-through testbench for the AND gate (all four input combinations) |
+| `sources_1/new/OR2_Gate_tb.v` | Walk-through testbench for the OR gate |
 
-## Gate Specifications
+---
 
-### AND2_Gate
-- Inputs: A, B
-- Output: Y = A & B
-- Truth table:
-  - 00 → 0
-  - 01 → 0
-  - 10 → 0
-  - 11 → 1
+## Specifications
 
-### OR2_Gate
-- Inputs: A, B
-- Output: Y = A | B
-- Truth table:
-  - 00 → 0
-  - 01 → 1
-  - 10 → 1
-  - 11 → 1
+| Parameter | Value |
+|-----------|-------|
+| Inputs | `A`, `B` — single-bit |
+| Output | `F` — single-bit, declared `reg` (driven inside an always block) |
+| Style | Behavioral (combinational always block) |
+| Tool | Vivado |
+| Language | Verilog |
 
-## File Structure
+---
 
-- `AND2_Gate.v`: AND gate implementation
-- `OR2_Gate.v`: OR gate implementation
-- `AND2gate_tb.v`, `AND2_Gate.tb`: AND gate testbenches
-- `OR2_Gate_tb.v`: OR gate testbench
-- Vivado project files
+## Truth Tables
 
-## Simulation
+| A | B | AND `F` | OR `F` |
+|---|---|---------|--------|
+| 0 | 0 | 0 | 0 |
+| 0 | 1 | 0 | 1 |
+| 1 | 0 | 0 | 1 |
+| 1 | 1 | 1 | 1 |
 
-1. Open project in Vivado
-2. Add testbench files to simulation set
-3. Run behavioral simulation
-4. Analyze waveforms for correct gate operation
+---
 
-## Learning Outcomes
+## How to Run
 
-This project covers:
-- Basic Verilog syntax and structure
-- Combinational logic design
-- Testbench creation and stimulus generation
-- Waveform analysis
-- Digital logic verification techniques
+1. Open `primative_gates.xpr` in Vivado.
+2. Set either testbench (`AND2gate_tb` or `OR2_Gate_tb`) as simulation top.
+3. Run **Run Simulation -> Run Behavioral Simulation**.
+4. Confirm `F` matches the expected truth table at each stimulus step.

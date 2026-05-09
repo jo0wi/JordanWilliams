@@ -1,65 +1,70 @@
-# Thunderbird Turn Signal
+# Thunderbird Turn Signal — Basys3 (Verilog / Vivado)
 
-A finite state machine (FSM) implementation of the classic Thunderbird automobile sequential turn signal pattern. This FPGA project recreates the iconic sequential lighting sequence used in Ford Thunderbird cars from the 1960s.
+A finite-state-machine implementation of the classic 1965 Ford Thunderbird sequential turn signal: each press of `Left` or `Right` walks a three-LED chain outward (`A -> A+B -> A+B+C`) before returning to the off state. Implemented as a one-process Mealy/Moore hybrid FSM clocked at 1 Hz on the Basys3.
 
-## Features
+---
 
-- Sequential turn signal animation (LA → LB → LC for left, RA → RB → RC for right)
-- Finite state machine design
-- 1 Hz timing for realistic turn signal speed
-- Left and right turn signal inputs
-- Reset functionality
+## Project Structure
 
-## Technologies Used
+| File | Description |
+|------|-------------|
+| `sources_1/new/TurnSignal_FSM.v` | `ThunderbirdFSM` — 7-state FSM (`S_Off`, `S_L1-L3`, `S_R1-R3`) |
+| `sources_1/new/ClkDiv.v` | `ClkDiv` — divide-by-50 M counter; produces 1 Hz tick from the 100 MHz Basys3 clock |
+| `sources_1/new/TB_FSM_1Hz_Top.v` | Top — wires `ClkDiv` into `ThunderbirdFSM`, mapping switches/LEDs to the Basys3 |
+| `sim_1/new/TBird_Turrnsignal_tb.v` | Behavioral testbench — exercises Left, Right, and reset sequences |
+| `sim_1/new/ClkDiv_tb.v` | Standalone clock-divider testbench |
 
-- Verilog HDL
-- Finite State Machine (FSM) design
-- Clock division
-- Xilinx Vivado Design Suite
-- Basys-3 development board
+---
 
-## Hardware Requirements
+## State Diagram
 
-- Basys-3 FPGA board
-- 6 LEDs for turn signal outputs (LA, LB, LC, RA, RB, RC)
-- 2 input switches/buttons for Left/Right signals
-- Reset button
+```
+                Left & !Right
+        S_Off ---------------> S_L1 --> S_L2 --> S_L3 --+
+          ^                                              |
+          | <--------------------------------------------+
+          |
+          | Right & !Left
+          +-----------------> S_R1 --> S_R2 --> S_R3 --+
+                                                         |
+                              <--------------------------+
+```
 
-## Implementation Details
+| State | LEDs Lit |
+|-------|----------|
+| `S_Off` | none |
+| `S_L1` | LA |
+| `S_L2` | LA, LB |
+| `S_L3` | LA, LB, LC |
+| `S_R1` | RA |
+| `S_R2` | RA, RB |
+| `S_R3` | RA, RB, RC |
 
-### State Machine
-- **S_Off**: Idle state, waiting for turn signal input
-- **S_L1-S_L3**: Left turn sequence states
-- **S_R1-S_R3**: Right turn sequence states
+---
 
-### Timing
-- 1 Hz clock divider for turn signal timing
-- Each state represents one "step" in the sequence
-- Transitions automatically through sequence when turn signal is active
+## Specifications
 
-### Signal Outputs
-- Left turn: LA (front) → LB (middle) → LC (rear)
-- Right turn: RA (front) → RB (middle) → RC (rear)
+| Parameter | Value |
+|-----------|-------|
+| FPGA Board | Basys3 (Artix-7) |
+| System Clock | 100 MHz |
+| FSM Tick | 1 Hz (`HalfCLK = 50_000_000`) |
+| Inputs | `Left`, `Right`, `Rst` (synchronous) |
+| Outputs | `LA, LB, LC` (left chain), `RA, RB, RC` (right chain) |
+| Tool | Vivado |
+| Language | Verilog |
 
-## File Structure
+---
 
-- `TurnSignal_FSM.v`: Main FSM logic
-- `ClkDiv.v`: Clock divider for 1 Hz timing
-- `TB_FSM_1Hz_Top.v`: Top-level module integration
-- Vivado project files
+## How It Works
 
-## Usage
+The clock divider produces a 1 Hz pulse from the 100 MHz Basys3 oscillator using a free-running counter. The FSM clocks on this divided edge. From `S_Off`, asserting only `Left` advances the FSM through `S_L1 -> S_L2 -> S_L3` over three seconds, illuminating one additional LED on each step before returning to `S_Off`. `Right` triggers the mirrored sequence. Asserting both inputs simultaneously is treated as no command (FSM stays in `S_Off`). The reset is synchronous and forces the state register back to `S_Off` immediately.
 
-1. Apply Left or Right input to activate respective turn signal
-2. Observe sequential LED illumination pattern
-3. Sequence repeats while input is held
-4. Returns to off state when input is released
+---
 
-## Learning Outcomes
+## How to Run
 
-This project demonstrates:
-- Finite state machine design and implementation
-- Sequential logic and state transitions
-- Clock domain crossing and timing control
-- Automotive electronics concepts
-- Historical technology recreation
+1. Open `TBird_Turnsignal.xpr` in Vivado.
+2. Verify `TB_FSM_1Hz_Top` is the synthesis top and the Basys3 XDC (in the parent `Digital_Design_Labs/` folder) is included.
+3. Run **Synthesis -> Implementation -> Generate Bitstream** and program the Basys3.
+4. Map two switches to `Left` / `Right` and one button to `Rst`. Six LEDs (or external 3+3 LEDs wired to PMOD pins) display the sequence.

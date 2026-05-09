@@ -1,55 +1,42 @@
-# LED Blinker
+# LED Blinker — Nexys A7-100T (Verilog / Vivado)
 
-A basic FPGA project that implements a PWM generator to blink an LED at 1 Hz. This project demonstrates fundamental digital design concepts including clock division and output control.
+A minimal Verilog module that toggles an FPGA LED at 1 Hz by dividing the 100 MHz system clock with a free-running counter. Used as the introductory "hello world" for the Vivado synthesis-implementation-bitstream flow on the Nexys A7-100T.
 
-## Features
+---
 
-- 1 Hz LED blinking frequency
-- PWM-based implementation
-- Configurable timing parameters
-- Synchronous design
+## Project Structure
 
-## Technologies Used
+| File | Description |
+|------|-------------|
+| `blinkLED.srcs/sources_1/new/blinkLED.v` | `PWM_generator` module — 100 MHz / 100 M counter that toggles `LED` at the rollover |
+| `Nexys-A7-100T-Master.xdc` (parent dir) | Pin constraints (LED -> onboard LD0) |
 
-- Verilog HDL
-- Xilinx Vivado Design Suite
-- FPGA synthesis and implementation
-- Nexys-A7 development board
+---
 
-## Hardware Requirements
+## Specifications
 
-- Nexys-A7 FPGA board
-- LED connected to appropriate pin (configured in constraints)
+| Parameter | Value |
+|-----------|-------|
+| FPGA Board | Nexys A7-100T (Artix-7) |
+| System Clock | 100 MHz |
+| Counter terminal value | 50,000,000 (`halfCycle = 100_000_000 / 2`) |
+| LED toggle period | 500 ms (toggles every half-cycle) |
+| Visible blink rate | 1 Hz (full on -> off -> on) |
+| Tool | Vivado |
+| Language | Verilog |
 
-## Implementation Details
+---
 
-The design uses a counter that increments on each clock cycle. When the counter reaches half the desired cycle count (50,000,000 for 100 MHz clock), the LED state is toggled, creating a 1 Hz blink rate.
+## How It Works
 
-### Key Parameters
+A 32-bit `integer` counter increments on every rising edge of the 100 MHz clock. When the counter reaches `halfCycle - 1` (50,000,000 - 1), it resets to zero and inverts the `LED` register. The result is a 50% duty-cycle square wave on the LED at 1 Hz — essentially the simplest form of a clock divider.
 
-- Clock frequency: 100 MHz
-- Target blink frequency: 1 Hz
-- Half cycle count: 50,000,000
+---
 
-## File Structure
+## How to Run
 
-- `blinkLED.v`: Main Verilog module
-- `blinkLED.xdc`: Pin constraints (in parent directory)
-- Vivado project files (.xpr, .cache, .hw, .runs, .srcs)
-
-## Synthesis and Implementation
-
-1. Open the project in Xilinx Vivado
-2. Run Synthesis
-3. Run Implementation
-4. Generate Bitstream
-5. Program the FPGA
-
-## Learning Outcomes
-
-This project covers:
-- Basic Verilog module structure
-- Clock domain design
-- Counter implementation
-- FPGA pin constraints
-- Timing analysis basics
+1. Open `blinkLED.xpr` in Vivado.
+2. Confirm `blinkLED.v` is set as the top module and the Nexys A7 XDC is included under Constraints.
+3. Run **Synthesis -> Implementation -> Generate Bitstream**.
+4. Connect the Nexys A7 via USB-JTAG, open the Hardware Manager, and program the device.
+5. Onboard LED LD0 should blink at 1 Hz.

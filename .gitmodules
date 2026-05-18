@@ -1,0 +1,3 @@
+[submodule "Hardware_Projects/Motor_Controller"]
+    path = Hardware_Projects/Motor_Controller
+    url = https://afs-vcs-ue1.365.altium.com/git/900C55FF-00CC-4CBF-8676-5D16F40B8389.git

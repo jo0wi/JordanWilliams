@@ -1,21 +1,20 @@
-# Hardware Projects — Altium PCB Designs
+# Hardware Projects — PCB Designs
 
-Altium Designer PCB projects covering schematic capture, layout, BOM generation, and CAM output for fabrication.
+PCB projects covering schematic capture, layout, BOM generation, and CAM output for fabrication.
 
 ---
 
 ## Boards
 
-| Project | Summary |
-|---|---|
-| [12 V → 5 V Regulator](./12v%20to%205v_Regulator/) | Buck regulator stepping a 12 V automotive / bench supply to a regulated 5 V rail. |
-| [Motor Controller](./Motor_Controller/) | Custom motor-controller PCB front-end. |
+| Project | Tool | Summary |
+|---|---|---|
+| [Motor Controller](./Motor_Controller/) | KiCad 9.0.5 | Battery-powered DC motor controller built around the ATmega328P with joystick input, onboard USB-C charging, and a USB-UART debug bridge. |
 
 ---
 
 ## How to Open
 
-Each project is a standalone Altium project (`.PrjPcb`). Open the `.PrjPcb` in Altium Designer, then use the *Projects* panel to navigate the schematic (`.SchDoc`) and layout (`.PcbDoc`).
+Open `.kicad_pro` in KiCad 9.0.5, then use the project manager to navigate the schematic (`.kicad_sch`) and layout (`.kicad_pcb`).
 
 ---
 

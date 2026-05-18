@@ -73,7 +73,7 @@ USB-C ──► LTC4053 Charger ──► Li-ion Battery
 
 **Front**
 
-![Front](Motor_Controller/front.png)
+![Front](Hardware_Projects/Motor_Controller/front.png)
 
 **Back**
 
